@@ -1,0 +1,8 @@
+interface:
+  display_name: "岗位AI工作台"
+  short_description: "读取岗位资料并搭建专属AI工作台与候选工作流"
+  default_prompt: "Use $job-ai-workbench to read my uploaded job materials first, build my role-specific AI workbench, and identify three candidate workflows."
+
+policy:
+  allow_implicit_invocation: true
+

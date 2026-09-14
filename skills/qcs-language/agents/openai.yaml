@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS·大白话"
+  short_description: "把复杂文案改成目标观众能听懂、能复述的短视频口播表达"
+  default_prompt: "使用 $qcs-language 把这段短视频文案改成普通人能听懂、能复述的大白话。"

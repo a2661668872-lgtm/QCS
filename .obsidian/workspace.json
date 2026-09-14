@@ -1,0 +1,237 @@
+{
+  "main": {
+    "id": "71b5705da94b8a43",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5e376a1a4946a3c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7ec9128d67776308",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/安先生课程Skill体系规划_v0.1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "安先生课程Skill体系规划_v0.1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1c7d947bb2588840",
+    "type": "split",
+    "children": [
+      {
+        "id": "facb6d13308cab9a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0be4463c2f66fe29",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "ca597ac99359ac51",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "cab5e2d052f8cbca",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "23bbf1c83e87c93a",
+    "type": "split",
+    "children": [
+      {
+        "id": "083b005bea7eb6ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2435c77c68ce6b8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "05_内容草稿/001_抓住AI时代红利_最终发布稿.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "001_抓住AI时代红利_最终发布稿 的反向链接列表"
+            }
+          },
+          {
+            "id": "170c266bf045d62d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "05_内容草稿/001_抓住AI时代红利_最终发布稿.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "001_抓住AI时代红利_最终发布稿 的出链列表"
+            }
+          },
+          {
+            "id": "34d9adbebdc4ca1d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "356f8ee038d1a9f7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "a27ebf6001344261",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "05_内容草稿/001_抓住AI时代红利_最终发布稿.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "001_抓住AI时代红利_最终发布稿 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "7ec9128d67776308",
+  "lastOpenFiles": [
+    "07_AI编导系统/AI编导总纲.md",
+    "07_AI编导系统/指标与内容目标字典.md",
+    "07_AI编导系统/规则升级日志.md",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/笔记信息.md",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/08_正文配图_07.jpg",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/07_正文配图_06.jpg",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/06_正文配图_05.png",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/05_正文配图_04.jpg",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/04_正文配图_03.jpg",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/03_正文配图_02.jpg",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/02_正文配图_01.jpg",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717/01_封面.jpg",
+    "02_内容素材/X_CrazyKaomei_儿童英语绘本AI工业化出片变现_2097969091537719717",
+    "02_内容素材/X_qihang_zeng6688_小红书虚拟1年复制8家店_2074086006857347327/笔记信息.md",
+    "02_内容素材/X_qihang_zeng6688_小红书虚拟1年复制8家店_2074086006857347327/18_结尾配图.jpg",
+    "02_内容素材/X_qihang_zeng6688_小红书虚拟1年复制8家店_2074086006857347327/17_平台周期示意.jpg",
+    "02_内容素材/X_qihang_zeng6688_小红书虚拟1年复制8家店_2074086006857347327",
+    "02_内容素材/小红书虚拟店铺_简历模板_约14个月3.7万单_待补来源/笔记信息.md",
+    "02_内容素材/小红书虚拟店铺_游戏资料模板_约5个月3400单_待补来源/笔记信息.md",
+    "02_内容素材/小红书虚拟店铺_简历模板_约14个月3.7万单_待补来源",
+    "02_内容素材/小红书虚拟店铺_游戏资料模板_约5个月3400单_待补来源",
+    "05_内容草稿/011_24小时启动生意_最终发布稿.md",
+    "05_内容草稿/011_24小时启动生意_AI初稿.md",
+    "05_内容草稿/011_24小时启动生意_素材包.md",
+    "07_AI编导系统/单条编导卡/2026-09-11_24小时启动生意.md",
+    "02_内容素材/X_dontbesilent_如何在24h内拥有自己的生意_1847954417791664470/笔记信息.md",
+    "02_内容素材/X_dontbesilent_如何在24h内拥有自己的生意_1847954417791664470",
+    "02_内容素材/X_better_christal_2026-08-01至2026-09-11/_长文章待补.json",
+    "02_内容素材/X_better_christal_2026-08-01至2026-09-11/账号索引.md",
+    "02_内容素材/X_better_christal_2026-08-01至2026-09-11/2026-09.md",
+    "02_内容素材/X_better_christal_2026-08-01至2026-09-11/2026-08.md",
+    "02_内容素材/X_better_christal_2026-08-01至2026-09-11",
+    "02_内容素材/用AI做孩子成长纪念册_先交付8页电子版_待补来源/笔记信息.md",
+    "02_内容素材/用AI做孩子成长纪念册_先交付8页电子版_待补来源",
+    "02_内容素材/用AI做节日祝福视频_先卖9.9元模板版_待补来源/笔记信息.md",
+    "02_内容素材/用AI做节日祝福视频_先卖9.9元模板版_待补来源",
+    "02_内容素材/AI小红书代运营_帮周边商家做内容_待补来源/笔记信息.md",
+    "02_内容素材/AI小红书代运营_帮周边商家做内容_待补来源",
+    "02_内容素材/AI副业启动成本几乎为零_待补来源/笔记信息.md",
+    "02_内容素材/用AI帮长辈做人生回忆录_别等想问的时候已经没人能回答了_待补来源/笔记信息.md",
+    "02_内容素材/不知道WorkBuddy可以做哪些事_给你一些思路欢迎补充_待补来源/笔记信息.md",
+    "docs/superpowers/specs/2026-09-09-qcs-material-retrieval-design.md",
+    "07_AI编导系统/当前导演规则.md",
+    "07_AI编导系统/单条编导卡/_说明.md",
+    "scripts/2026-09-08_965865427f6c_AI付费需求从哪里找.md",
+    "05_内容草稿/009_AI付费需求从哪里找_最终发布稿.md"
+  ]
+}

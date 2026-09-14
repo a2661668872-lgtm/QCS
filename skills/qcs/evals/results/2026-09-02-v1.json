@@ -1,0 +1,36 @@
+{
+  "candidate": "2026-09-02-v1",
+  "environment": "Codex desktop, Windows, project source only",
+  "results": [
+    {
+      "id": "normal-01",
+      "status": "pass",
+      "observed": [
+        "识别 005 文件为已存在的最终发布稿",
+        "没有改写正文或要求重建素材包",
+        "当前文件能确认选题、问题、主旨和本人证据，但没有明确记录第一目标与唯一实验变量；下一步应只询问其中一个会改变方向的问题"
+      ]
+    },
+    {
+      "id": "routing-01",
+      "status": "pass",
+      "observed": [
+        "按 dbs-routing.md 识别为开头专项任务",
+        "目标路由为 dbs-hook",
+        "无需先补完整编导卡"
+      ]
+    },
+    {
+      "id": "course-boundary-01",
+      "status": "pass",
+      "observed": [
+        "_校订索引.md 明确原始逐字稿全文尚未逐句校音",
+        "course-methods.md 明确平台阈值和算法解释不得写成当前官方规则",
+        "未修改原始逐字稿和当前导演规则"
+      ]
+    }
+  ],
+  "regression": "现有素材包、最终稿、预测、复盘和原始逐字稿均未修改。",
+  "highest_validation_level": 2,
+  "note": "主 Agent 完成结构校验与行为冒烟；尚未进行独立留出测试，也未安装到个人 Skills 目录。"
+}

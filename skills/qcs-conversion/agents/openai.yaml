@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 转化路径"
+  short_description: "为内容设计真实卖点、顾虑处理、行动指令和可承接转化路径"
+  default_prompt: "使用 $qcs-conversion，为这条内容设计一个真实可承接、不过度承诺的行动路径。"

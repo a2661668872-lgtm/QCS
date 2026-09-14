@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 画面设计"
+  short_description: "为短视频设计可拍摄、能承担信息任务的镜头、空间与物品方案"
+  default_prompt: "使用 $qcs-visual，为这条短视频设计可拍摄、可核对素材来源的镜头方案。"

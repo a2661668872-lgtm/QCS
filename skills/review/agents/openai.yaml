@@ -1,0 +1,4 @@
+interface:
+  display_name: "复盘助手"
+  short_description: "创建发布复盘、记录24小时数据并生成下一篇可执行调整计划"
+  default_prompt: "使用 $review 为这篇已发布内容创建复盘，并在24小时数据补齐后生成轻复盘。"

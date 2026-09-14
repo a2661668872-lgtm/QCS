@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F7FAFC"/><stop offset="100%" stop-color="#EEF4FF"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#20304A" flood-opacity=".12"/></filter>
+    <marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12z" fill="#75849A"/></marker>
+    <style>
+      .t{font-family:"Microsoft YaHei",sans-serif;font-size:48px;font-weight:700;fill:#17243A}.sub{font-family:"Microsoft YaHei",sans-serif;font-size:22px;fill:#657387}
+      .h{font-family:"Microsoft YaHei",sans-serif;font-size:25px;font-weight:700;fill:#fff}.bt{font-family:"Microsoft YaHei",sans-serif;font-size:21px;font-weight:700;fill:#1E2A3A}
+      .tx{font-family:"Microsoft YaHei",sans-serif;font-size:16px;fill:#526174}.note{font-family:"Microsoft YaHei",sans-serif;font-size:20px;font-weight:700;fill:#245E4D}
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <circle cx="1770" cy="70" r="200" fill="#DCE8FF" opacity=".65"/><circle cx="70" cy="1030" r="220" fill="#DDF5EC" opacity=".75"/>
+  <text x="90" y="80" class="t">个人内容生产系统 v0.5｜助理引导与渐进式搭建流程</text>
+  <text x="92" y="120" class="sub">AI主动分析与规划，用户每轮只确认一个关键决定</text>
+
+  <rect x="90" y="160" rx="25" width="1740" height="58" fill="#4C6FFF"/><text x="960" y="198" text-anchor="middle" class="h">阶段一｜发现与策略：先确定做什么，以及怎样做更有效</text>
+  <g filter="url(#s)" fill="#fff" stroke="#B9C8F7" stroke-width="2">
+    <rect x="90" y="250" rx="18" width="310" height="145"/><rect x="450" y="250" rx="18" width="310" height="145"/><rect x="810" y="250" rx="18" width="310" height="145"/><rect x="1170" y="250" rx="18" width="310" height="145"/><rect x="1530" y="250" rx="18" width="300" height="145"/>
+  </g>
+  <text x="245" y="293" text-anchor="middle" class="bt">1. 连接已有资料</text><text x="245" y="328" text-anchor="middle" class="tx">个人经验库 · 外部资料库</text><text x="245" y="356" text-anchor="middle" class="tx">只读扫描与授权</text>
+  <text x="605" y="293" text-anchor="middle" class="bt">2. 识别候选系统</text><text x="605" y="328" text-anchor="middle" class="tx">结合目标与资料基础</text><text x="605" y="356" text-anchor="middle" class="tx">推荐最有价值方向</text>
+  <text x="965" y="293" text-anchor="middle" class="bt">3. AI优化策略</text><text x="965" y="328" text-anchor="middle" class="tx">主动诊断定位与优势</text><text x="965" y="356" text-anchor="middle" class="tx">提出建议、依据与取舍</text>
+  <text x="1325" y="293" text-anchor="middle" class="bt">4. 规划完整流程</text><text x="1325" y="328" text-anchor="middle" class="tx">看清系统未来如何运行</text><text x="1325" y="356" text-anchor="middle" class="tx">不一次确认全部细节</text>
+  <text x="1680" y="293" text-anchor="middle" class="bt">5. 推荐首个环节</text><text x="1680" y="328" text-anchor="middle" class="tx">诊断基础与关键缺口</text><text x="1680" y="356" text-anchor="middle" class="tx">用户确认一个决定</text>
+  <g stroke="#75849A" stroke-width="4" marker-end="url(#a)"><line x1="400" y1="323" x2="442" y2="323"/><line x1="760" y1="323" x2="802" y2="323"/><line x1="1120" y1="323" x2="1162" y2="323"/><line x1="1480" y1="323" x2="1522" y2="323"/></g>
+
+  <line x1="1680" y1="395" x2="1680" y2="455" stroke="#75849A" stroke-width="4" marker-end="url(#a)"/>
+  <rect x="90" y="465" rx="25" width="1740" height="58" fill="#23936A"/><text x="960" y="503" text-anchor="middle" class="h">阶段二｜渐进式建设：一次只建设并验证一个流程环节</text>
+  <g filter="url(#s)" fill="#fff" stroke="#8BCAB3" stroke-width="2">
+    <rect x="150" y="565" rx="20" width="350" height="170"/><rect x="570" y="565" rx="20" width="350" height="170"/><rect x="990" y="565" rx="20" width="350" height="170"/><rect x="1410" y="565" rx="20" width="350" height="170"/>
+  </g>
+  <text x="325" y="610" text-anchor="middle" class="bt">创建最小系统入口</text><text x="325" y="647" text-anchor="middle" class="tx">策略蓝图 · 流程蓝图</text><text x="325" y="677" text-anchor="middle" class="tx">当前进度 · 不批量建库</text>
+  <text x="745" y="610" text-anchor="middle" class="bt">建设当前流程环节</text><text x="745" y="647" text-anchor="middle" class="tx">AI提出方法与候选标准</text><text x="745" y="677" text-anchor="middle" class="tx">只创建必要文件</text>
+  <text x="1165" y="610" text-anchor="middle" class="bt">分层真实任务试跑</text><text x="1165" y="647" text-anchor="middle" class="tx">方向 → 结构 → 最小成果</text><text x="1165" y="677" text-anchor="middle" class="tx">通过后再扩展完整交付</text>
+  <text x="1585" y="610" text-anchor="middle" class="bt">成果要素逐项校准</text><text x="1585" y="647" text-anchor="middle" class="tx">识别缺口 · 推荐优先项</text><text x="1585" y="677" text-anchor="middle" class="tx">一次只校准一个要素</text>
+  <g stroke="#75849A" stroke-width="4" marker-end="url(#a)"><line x1="500" y1="650" x2="562" y2="650"/><line x1="920" y1="650" x2="982" y2="650"/><line x1="1340" y1="650" x2="1402" y2="650"/></g>
+
+  <line x1="1585" y1="735" x2="1585" y2="800" stroke="#75849A" stroke-width="4" marker-end="url(#a)"/>
+  <rect x="280" y="815" rx="25" width="1360" height="120" fill="#DFF5EC" stroke="#23936A" stroke-width="3"/>
+  <text x="960" y="860" text-anchor="middle" class="note">阶段三｜日常运行与持续生长</text>
+  <text x="960" y="900" text-anchor="middle" class="sub">同类任务 → 调用已验证环节与素材 → 用户反馈 → 验证后固化 → 按需建设下一环节</text>
+  <text x="960" y="1010" text-anchor="middle" class="note">先使用，后建库 ｜ 先验证，后固化 ｜ 用户做关键决策，AI主动主持全过程</text>
+</svg>

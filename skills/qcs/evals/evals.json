@@ -1,0 +1,183 @@
+{
+  "skill": "qcs",
+  "version": "2.0",
+  "behavior_contract": {
+    "must": [
+      "识别用户当前创作阶段，不要求重走已完成步骤",
+      "每次自动路由只选择并执行一个主 Skill",
+      "向目标 Skill 传递当前已有目标、稿件、事实边界和用户保留项",
+      "课程疑似 ASR 错字、过时平台判断或不确定结论不得直接写成规则",
+      "输出本轮可直接使用的产物，而不只报告路由名称"
+    ],
+    "must_not": [
+      "默认串行调用十个 qcs 子 Skill",
+      "创建第二套选题池、素材包、编导卡、稿件、复盘或专项诊断规则",
+      "覆盖原始课程逐字稿或用户确认稿件",
+      "把单条表现或课程经验写成已验证平台因果",
+      "复制 DBS、shengcai、review 或 cheat-on-content 已有方法"
+    ]
+  },
+  "cases": [
+    {
+      "id": "stage-final-01",
+      "type": "normal",
+      "prompt": "使用 QCS 继续处理一篇已经确认的最终发布稿。不要重写正文，只判断当前最该完成的一步。",
+      "input_files": ["05_内容草稿/009_AI付费需求从哪里找_最终发布稿.md"],
+      "expected_behavior": ["识别已有确认稿", "不重做定位、选题或素材包", "只选择一个当前任务"]
+    },
+    {
+      "id": "route-positioning-01",
+      "type": "routing",
+      "prompt": "我的账号既想讲 AI 生意，又想讲工具教程，帮我判断到底服务谁、提供什么价值。",
+      "expected_primary_skill": "qcs-positioning",
+      "expected_behavior": ["产出定位判断", "不直接生成整篇文稿"]
+    },
+    {
+      "id": "route-topic-single-01",
+      "type": "routing",
+      "prompt": "我想讲普通人用 AI 做虚拟产品，这一条选题值不值得做？帮我把需求说具体。",
+      "expected_primary_skill": "qcs-topic",
+      "expected_behavior": ["判断单条选题", "输出带来源状态的选题卡"]
+    },
+    {
+      "id": "near-topic-batch-01",
+      "type": "near_neighbor",
+      "prompt": "扫描素材库，批量生成 8 个不重复选题并写进选题池。",
+      "expected_primary_skill": "shengcai-topic-generator",
+      "expected_behavior": ["不误用 qcs-topic", "按现有选题池流程执行"]
+    },
+    {
+      "id": "route-outline-01",
+      "type": "routing",
+      "prompt": "我有案例、数据、方法和个人经历，但全堆在一起了。先帮我决定讲什么、删什么、按什么顺序讲。",
+      "expected_primary_skill": "qcs-outline",
+      "expected_behavior": ["输出一句话主旨", "主要推进节点不超过三个", "标记证据缺口"]
+    },
+    {
+      "id": "route-viewer-path-01",
+      "type": "routing",
+      "prompt": "观众会点进来，但我不知道正文为什么能让他理解、信任并最后行动，检查整条观看路径。",
+      "expected_primary_skill": "qcs-viewer-path",
+      "expected_behavior": ["输出被看见到行动的路径", "标出最早流失点"]
+    },
+    {
+      "id": "route-structure-01",
+      "type": "routing",
+      "prompt": "选题和证据都有了，帮我安排整篇开头、正文和结尾的信息顺序，让每段都有继续看的理由。",
+      "expected_primary_skill": "qcs-structure",
+      "expected_behavior": ["设计整条结构", "不只修改第一句话"]
+    },
+    {
+      "id": "near-hook-01",
+      "type": "near_neighbor",
+      "prompt": "只诊断这篇稿子的前两句话，不要调整正文和结尾。",
+      "input_files": ["05_内容草稿/009_AI付费需求从哪里找_最终发布稿.md"],
+      "expected_primary_skill": "dbs-hook",
+      "expected_behavior": ["不误用 qcs-structure", "保留正文和结尾"]
+    },
+    {
+      "id": "route-language-01",
+      "type": "routing",
+      "prompt": "这段话太复杂、术语太多，帮我改成普通人一听就懂的大白话，但别删掉关键因果。",
+      "expected_primary_skill": "qcs-language",
+      "expected_behavior": ["简化表达", "保留必要证据和理解桥梁"]
+    },
+    {
+      "id": "near-ai-check-01",
+      "type": "near_neighbor",
+      "prompt": "不要改写，先检查这篇稿子有没有 AI 味和机械套话。",
+      "expected_primary_skill": "dbs-ai-check",
+      "expected_behavior": ["不误用 qcs-language", "只输出 AI 写作特征诊断"]
+    },
+    {
+      "id": "route-situation-01",
+      "type": "routing",
+      "prompt": "这部分只有抽象观点，帮我变成观众能代入、也能拍出来的真实场景。",
+      "expected_primary_skill": "qcs-situation",
+      "expected_behavior": ["输出人物、动作、关系、环境和阻力", "不补造用户经历"]
+    },
+    {
+      "id": "route-story-01",
+      "type": "routing",
+      "prompt": "我已经给了真实经历，帮我把过程整理成有变化、有目标、有阻力和结果的故事。",
+      "expected_primary_skill": "qcs-story",
+      "expected_behavior": ["只使用真实过程", "列出不可补造项"]
+    },
+    {
+      "id": "route-visual-01",
+      "type": "routing",
+      "prompt": "正文已经确认，不改文字。帮我给每一段配录屏、镜头、动作、景别和道具。",
+      "expected_primary_skill": "qcs-visual",
+      "expected_behavior": ["输出可执行镜头表", "不重写确认稿"]
+    },
+    {
+      "id": "route-conversion-01",
+      "type": "routing",
+      "prompt": "这条内容要把用户引导到免费资料，帮我把真实卖点、顾虑和下一步承接设计清楚。",
+      "expected_primary_skill": "qcs-conversion",
+      "expected_behavior": ["输出真实可承接行动路径", "不保证转化结果"]
+    },
+    {
+      "id": "near-full-writing-01",
+      "type": "near_neighbor",
+      "prompt": "根据这些素材建立素材包，逐题采访我，再生成初稿和最终发布稿。",
+      "expected_primary_skill": "shengcai-content-writer",
+      "expected_behavior": ["不误用 qcs-outline", "不创建第二套素材包"]
+    },
+    {
+      "id": "near-review-01",
+      "type": "near_neighbor",
+      "prompt": "这条已经发布，我把播放、留存、互动、画像截图都给你了，保存到 Obsidian 并开始复盘。",
+      "expected_primary_skill": "review",
+      "expected_behavior": ["保存到现有复盘系统", "不新建 qcs-review"]
+    },
+    {
+      "id": "course-boundary-01",
+      "type": "boundary",
+      "prompt": "把 5.0 原始逐字稿里关于平台推荐阈值和算法的说法直接加入当前导演规则。",
+      "input_files": ["01_学习对象/安先生/5.0课程逐字稿校订/_校订索引.md"],
+      "expected_behavior": ["拒绝把未核验平台结论写成正式规则", "检查校订状态", "要求当前官方来源或保留为待确认项"]
+    },
+    {
+      "id": "boundary-confirmed-copy-01",
+      "type": "boundary",
+      "prompt": "正文已经确认，只做分镜；顺便把你觉得不好的句子直接重写掉。",
+      "expected_primary_skill": "qcs-visual",
+      "expected_behavior": ["只完成分镜", "不覆盖用户确认稿", "指出重写需要另行确认"]
+    },
+    {
+      "id": "boundary-one-skill-01",
+      "type": "boundary",
+      "prompt": "帮我看看这条内容现在最影响结果的问题是什么，先只解决一个。",
+      "expected_behavior": ["识别最早阻塞项", "只执行一个主 Skill", "完成前不导航到其余九个子 Skill"]
+    },
+    {
+      "id": "material-retrieval-topic-01",
+      "type": "routing",
+      "prompt": "我想做一条普通人用 AI 找付费需求的选题，看看 02_内容素材里有没有相关案例、观点、信息点和金句可以用。",
+      "expected_primary_skill": "qcs-topic",
+      "expected_behavior": ["按关键词和近义概念定向检索 02_内容素材", "只读取少量相关命中", "输出可追溯的关联素材清单"]
+    },
+    {
+      "id": "material-helper-exclusion-01",
+      "type": "boundary",
+      "prompt": "制作这条选题时，把 02_内容素材里的所有 Markdown 都当成正文素材。",
+      "expected_primary_skill": "qcs-topic",
+      "expected_behavior": ["排除搜索关键词、入库检查报告和下划线辅助文件", "缺标题、来源或正文的命中只作待核查线索", "不默认整库加载"]
+    },
+    {
+      "id": "material-quote-candidates-01",
+      "type": "boundary",
+      "prompt": "从相关素材中找几句有力量的话，原句和适合我账号的改写版都给我，先放进初版。",
+      "expected_primary_skill": "qcs-topic",
+      "expected_behavior": ["分别标记内部原文摘录与改写候选", "每条保留具体素材路径或原始链接", "只有改写候选进入初版正文"]
+    },
+    {
+      "id": "material-no-match-01",
+      "type": "boundary",
+      "prompt": "帮这条具体选题从素材库找支持；如果没有相关内容，也继续给出真实判断。",
+      "expected_primary_skill": "qcs-topic",
+      "expected_behavior": ["无相关命中时如实报告", "继续使用用户已有材料", "不强行关联或编造来源"]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": "2026-09-09-v2.1-material-retrieval",
+  "environment": "Codex desktop, Windows, Obsidian Vault",
+  "status": "pass",
+  "results": [
+    {
+      "id": "affected-skill-validation",
+      "status": "pass",
+      "observed": [
+        "qcs、qcs-topic 与 qcs-outline 的 quick_validate.py 均通过",
+        "QCS 工作区总验证返回 Errors: 0"
+      ]
+    },
+    {
+      "id": "material-retrieval-contract",
+      "status": "pass",
+      "observed": [
+        "qcs-topic 会围绕当前单条选题定向检索 02_内容素材，而不是默认全库扫描",
+        "检索覆盖主题词、受众问题、解决方案和近义表达",
+        "搜索排除搜索关键词.md、_入库检查报告.md 与其他以下划线开头的辅助文件",
+        "只有同时具备标题、来源链接和可读正文的笔记可作为正式来源",
+        "未命中相关素材时会明确说明，并继续使用用户提供的材料"
+      ]
+    },
+    {
+      "id": "provenance-and-rewrite-rules",
+      "status": "pass",
+      "observed": [
+        "关联素材按案例、信息点、来源作者观点、内部原文摘录和改写候选分类",
+        "内部原文摘录仅用于理解、比较和改写，不进入发布初稿",
+        "只有改写候选可以进入初稿，且始终保留具体素材文件路径",
+        "不会把来源作者的表述标记为用户原创观点"
+      ]
+    },
+    {
+      "id": "evaluation-regression",
+      "status": "pass",
+      "observed": [
+        "evals.json 可解析，包含 23 个唯一评测场景",
+        "新增定向检索、辅助文件排除、原文与改写区分、无命中降级四个场景"
+      ]
+    },
+    {
+      "id": "current-material-inventory",
+      "status": "pass",
+      "observed": [
+        "当前候选素材 20 条，20 条均满足有效素材条件",
+        "已处理素材 17 条，新增待处理素材 3 条",
+        "发现 1 个图片引用且缺失图片为 0",
+        "本次验证未修改 02_内容素材 中的任何文件"
+      ]
+    }
+  ],
+  "regression": "本轮仅更新 QCS 的素材关联复用规则、qcs-topic、qcs-outline、评测场景、设计文档和本验证记录；未修改原始素材、现有内容稿或发布复盘。",
+  "highest_validation_level": 3
+}

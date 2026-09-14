@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "status_claim": "knowledge_base_initialized",
+  "tasks": [
+    {"id": "purpose", "required": true, "status": "pending"},
+    {"id": "blueprint", "required": true, "status": "pending"},
+    {"id": "structure_initialization", "required": true, "status": "pending"},
+    {"id": "inventory", "required": true, "status": "pending"},
+    {"id": "ledger", "required": true, "status": "pending"},
+    {"id": "source_summaries", "required": true, "status": "pending"},
+    {"id": "atomic_materials", "required": true, "status": "pending"},
+    {"id": "source_relations", "required": true, "status": "pending"},
+    {"id": "retrieval_validation", "required": true, "status": "pending"},
+    {"id": "application_validation", "required": false, "status": "pending"},
+    {"id": "coverage_report", "required": true, "status": "pending"},
+    {"id": "user_confirmation", "required": false, "status": "pending"}
+  ],
+  "artifacts": {
+    "purpose": "",
+    "blueprint": "",
+    "structure_initialization": "",
+    "inventory": "",
+    "ledger": "",
+    "source_summaries": "",
+    "atomic_materials": "",
+    "source_relations": "",
+    "retrieval_validation": "",
+    "application_validation": "",
+    "coverage_report": "",
+    "user_confirmation": ""
+  },
+  "application_result": null,
+  "user_confirmed": false,
+  "execution_tasks": [],
+  "exceptions": []
+}

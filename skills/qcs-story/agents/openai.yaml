@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 故事设计"
+  short_description: "把真实过程整理成有变化、有行动、有结果的短视频故事链"
+  default_prompt: "使用 $qcs-story，把这段真实经历整理成不补造事实的短视频故事链。"

@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.4",
+  "skill_version": "1.0.0",
+  "rubric_version": "v0",
+  "content_form": "mixed",
+  "typical_duration_seconds": null,
+  "target_publish_cadence_days": 2,
+  "rubric_form_mismatch": true,
+  "benchmark_status": "pending",
+  "benchmark_name": null,
+  "benchmark_sample_count": 0,
+  "baseline_plays": null,
+  "calibration_samples": 0,
+  "data_collection": "manual",
+  "pool_status": "markdown",
+  "pool_path": "04_选题库/选题池.md",
+  "data_layer": "markdown",
+  "hooks_installed": false,
+  "enabled_trend_sources": [
+    "manual-paste"
+  ],
+  "enabled_perf_adapters": [],
+  "last_bump_at": null,
+  "last_bump_self_audited": false,
+  "last_published_at": null,
+  "last_published_file": null,
+  "last_retro_at": null,
+  "last_trends_run_at": null,
+  "last_trends_added_count": 0,
+  "last_prediction_self_scored": false,
+  "last_self_scored_at": null,
+  "consecutive_directional_errors": [],
+  "pending_retros": [],
+  "shoots": [],
+  "in_progress_session": {
+    "type": "prediction",
+    "file": "predictions/2026-08-15_d483da5b8296_抓住AI红利.md",
+    "video_folder": null,
+    "started_at": "2026-08-15T23:07:15+08:00",
+    "rubric_version": "v0"
+  },
+  "initialized_at": "2026-08-15T22:34:46.7850534+08:00"
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "generated_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "purpose": "",
+  "sources": [
+    {
+      "source_id": "SRC-XXXX",
+      "source_title": "",
+      "source_location": "",
+      "source_type": "",
+      "processing_status": "discovered",
+      "purpose_value": "",
+      "content_fingerprint": "",
+      "last_scanned_at": "",
+      "last_processed_at": "",
+      "generated_materials": [],
+      "timeliness": "low",
+      "verification_status": "unverified",
+      "unprocessed_reason": ""
+    }
+  ]
+}
+

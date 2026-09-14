@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS·情境设计"
+  short_description: "把抽象观点落进有来源的人物、行动、关系和具体环境情境"
+  default_prompt: "使用 $qcs-situation 把这段抽象内容转成不补造事实的具体情境卡。"

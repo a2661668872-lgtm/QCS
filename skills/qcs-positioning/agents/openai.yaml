@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 定位与人设"
+  short_description: "澄清账号定位、人设、内容主线与单条内容的业务位置和目标"
+  default_prompt: "使用 $qcs-positioning 澄清我的账号定位或这条内容在业务路径中的位置。"

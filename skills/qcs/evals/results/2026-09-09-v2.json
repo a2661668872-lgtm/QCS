@@ -1,0 +1,60 @@
+{
+  "candidate": "2026-09-09-v2",
+  "environment": "Codex desktop, Windows, Vault source plus user-level Junctions",
+  "status": "pass_with_retest_note",
+  "results": [
+    {
+      "id": "structure-validation",
+      "status": "pass",
+      "observed": [
+        "qcs 与十个 qcs-* 子 Skill 的 quick_validate.py 均通过",
+        "11 个 frontmatter 名称与目录一致",
+        "11 个 agents/openai.yaml 的 default_prompt 均包含对应 $skill-name",
+        "11 个 short_description 均在 25 至 64 字符范围"
+      ]
+    },
+    {
+      "id": "course-map-validation",
+      "status": "pass",
+      "observed": [
+        "course-map.md 恰好包含 38 行课程映射",
+        "001 至 038 每个编号出现一次且无重复",
+        "未校音专题、时间语法高级试验和永久排除项均有边界说明"
+      ]
+    },
+    {
+      "id": "installation-validation",
+      "status": "pass",
+      "observed": [
+        "qcs 与十个 qcs-* 均安装为指向 Vault 真源的用户级 Junction",
+        "安装脚本首次新建 10 个子 Skill Junction",
+        "二次执行识别 11 个正确 Junction 并新建 0 个，幂等检查通过",
+        "从用户级 qcs Junction 无参数执行安装和验证脚本均通过"
+      ]
+    },
+    {
+      "id": "workspace-validation",
+      "status": "pass",
+      "observed": [
+        "validate-workspace.ps1 检查 11 个 Skill、38 条课程映射、共享参考、评测 JSON 和全部 Junction",
+        "工作区验证返回 Errors: 0",
+        "Markdown 相对链接检查未发现断链",
+        "evals.json 可解析，包含 19 个唯一评测场景"
+      ]
+    },
+    {
+      "id": "independent-forward-smoke",
+      "status": "pass_with_followup",
+      "observed": [
+        "独立审查对画面设计、批量选题、语言简化、开头专项和已发布复盘五类请求均选择正确主 Skill",
+        "五类请求均未出现自动串行调用",
+        "审查发现批量数量示例超出现有生成器单批范围，已把评测示例改为 8 个",
+        "审查发现开头专项可能扩大范围，已在 DBS 交接契约中加入用户显式修改范围最高优先级"
+      ],
+      "note": "两处修正已完成静态与工作区回归；独立 Agent 的第二次复测因当时服务额度中断，未得到新的独立回执。"
+    }
+  ],
+  "regression": "本轮实现范围限定在 qcs 主 Skill、十个 qcs-* 子 Skill、QCS 参考/脚本/评测和已批准设计文档；课程原稿、现有内容稿、复盘数据及外部 Skill 内部规则不在修改范围。",
+  "highest_validation_level": 3
+}
+

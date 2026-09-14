@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "knowledge_base_name": "<主题知识库名称>",
+  "directories": [
+    {"id": "overview", "path": "00_知识库说明", "purpose": "保存目的、边界、蓝图和使用说明", "required": true},
+    {"id": "source_management", "path": "01_资料认知与管理", "purpose": "保存识别清单、台账和处理状态", "required": true},
+    {"id": "source_summaries", "path": "02_源资料综合卡", "purpose": "保存源资料综合卡", "required": true},
+    {"id": "atomic_materials", "path": "03_可复用知识素材", "purpose": "保存按提炼蓝图生成的原子素材", "required": true},
+    {"id": "application", "path": "04_调用入口与应用验证", "purpose": "保存调用入口、成果草案和应用验证", "required": true},
+    {"id": "validation", "path": "05_待验证与覆盖报告", "purpose": "保存检索、质量、覆盖与完成报告", "required": true}
+  ]
+}

@@ -1,0 +1,38 @@
+knowledge_base:
+  name: ""
+  purpose: ""
+  primary_users: []
+  scope: []
+  excluded: []
+
+roles:
+  business_owner: ""
+  content_owners: {}
+  reviewers: {}
+  operator: ""
+  technical_support: ""
+
+approval:
+  low_risk: "rule_authorized"
+  medium_risk: "content_owner"
+  high_risk: "business_owner"
+
+version:
+  keep_history: true
+  superseded_content: "archive_and_disable"
+  require_effective_date: true
+
+review:
+  weekly: "feedback_and_new_content"
+  monthly: "quality_and_gaps"
+  quarterly: "scope_permissions_owners_value"
+
+emergency:
+  permission_leak: "request_immediate_suspension"
+  wrong_high_risk_answer: "request_immediate_suspension"
+
+publishing:
+  ai_generated_content_default_status: "待审核"
+  require_source: true
+  require_reviewer: true
+  require_regression_test: true

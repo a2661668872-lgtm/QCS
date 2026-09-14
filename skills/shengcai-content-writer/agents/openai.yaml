@@ -1,0 +1,4 @@
+interface:
+  display_name: "航海笔记助手"
+  short_description: "从选题素材包和用户访谈生成初稿，并在确认后整理最终发布稿"
+  default_prompt: "使用 $shengcai-content-writer 帮我写【选题名称】，先创建素材包并逐步访谈。"

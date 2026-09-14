@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 大纲与材料"
+  short_description: "把杂乱材料整理成一句主旨、证据缺口和三个以内推进节点"
+  default_prompt: "使用 $qcs-outline 把这条已定选题的材料整理成可直接写稿的大纲。"

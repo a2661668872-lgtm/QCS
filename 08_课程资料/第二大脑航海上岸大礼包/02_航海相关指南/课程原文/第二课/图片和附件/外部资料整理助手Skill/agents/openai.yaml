@@ -1,0 +1,4 @@
+interface:
+  display_name: "资料整理助理"
+  short_description: "按目的整理资料、建立知识库并用真实任务验证成果"
+  default_prompt: "使用 $organize-knowledge-sources 帮我找到并整理已有资料。先确认资料位置或协助扫描，再根据我的目的设计提炼蓝图、初始化并验证知识库目录、建立可调用素材，并用一个真实任务验证成果。"

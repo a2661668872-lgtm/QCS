@@ -1,0 +1,1149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="编导与个人IP十二周学习方案第一周完整学习包：定位、目标与基线作品。">
+  <title>第一周｜定位、目标与基线作品</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-2: #f0f4fa;
+      --text: #172033;
+      --muted: #667085;
+      --line: #dfe5ef;
+      --primary: #315efb;
+      --primary-2: #2449cc;
+      --primary-soft: #eaf0ff;
+      --green: #16835b;
+      --green-soft: #e9f7f1;
+      --amber: #9a6700;
+      --amber-soft: #fff6d8;
+      --red: #bb2d3b;
+      --red-soft: #fff0f1;
+      --shadow: 0 12px 32px rgba(25, 42, 70, .08);
+      --radius: 18px;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0d1320;
+      --surface: #151d2c;
+      --surface-2: #1c2638;
+      --text: #edf2ff;
+      --muted: #a9b4c8;
+      --line: #2a374c;
+      --primary: #83a2ff;
+      --primary-2: #a8bcff;
+      --primary-soft: #202f57;
+      --green: #68d6a8;
+      --green-soft: #143a30;
+      --amber: #f3c969;
+      --amber-soft: #443716;
+      --red: #ff9aa6;
+      --red-soft: #45232a;
+      --shadow: 0 12px 32px rgba(0, 0, 0, .22);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 0 0, rgba(49, 94, 251, .08), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      line-height: 1.72;
+    }
+
+    a { color: var(--primary-2); }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    :focus-visible { outline: 3px solid rgba(49, 94, 251, .35); outline-offset: 2px; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px clamp(16px, 4vw, 52px);
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 11px;
+      color: #fff;
+      background: linear-gradient(135deg, #315efb, #6f86ff);
+    }
+
+    .top-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      color: var(--text);
+      background: var(--surface);
+      text-decoration: none;
+    }
+    .button:hover { border-color: var(--primary); }
+    .button.primary { color: #fff; border-color: #315efb; background: #315efb; }
+    [data-theme="dark"] .button.primary { color: #10172a; border-color: #83a2ff; background: #83a2ff; }
+    .button.danger { color: var(--red); }
+
+    .hero {
+      padding: 64px clamp(18px, 6vw, 80px) 38px;
+      background:
+        linear-gradient(120deg, rgba(49, 94, 251, .12), rgba(111, 134, 255, .02)),
+        var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--primary-2);
+      background: var(--primary-soft);
+      font-size: .86rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 18px 0 14px;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+    .hero-copy { max-width: 780px; margin: 0; color: var(--muted); font-size: 1.08rem; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 980px;
+      margin-top: 32px;
+    }
+    .metric {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--surface);
+    }
+    .metric strong { display: block; font-size: 1.4rem; line-height: 1.2; }
+    .metric span { color: var(--muted); font-size: .9rem; }
+
+    .progress-wrap { max-width: 980px; margin-top: 22px; }
+    .progress-head { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; font-size: .92rem; }
+    .progress-track { height: 10px; overflow: hidden; border-radius: 999px; background: var(--surface-2); }
+    .progress-bar { width: 0; height: 100%; background: linear-gradient(90deg, #315efb, #7790ff); transition: width .25s ease; }
+
+    .page {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 920px);
+      justify-content: center;
+      gap: 34px;
+      padding: 34px 22px 80px;
+    }
+    .side { align-self: start; position: sticky; top: 76px; }
+    .side-nav {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .side-nav a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 9px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .92rem;
+    }
+    .side-nav a:hover { color: var(--primary-2); background: var(--primary-soft); }
+
+    main { min-width: 0; }
+    section {
+      scroll-margin-top: 88px;
+      margin-bottom: 26px;
+      padding: clamp(20px, 4vw, 34px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    section h2 { margin: 0 0 8px; font-size: clamp(1.35rem, 3vw, 1.8rem); letter-spacing: -.025em; }
+    section h3 { margin: 26px 0 8px; font-size: 1.08rem; }
+    section > p:first-of-type { margin-top: 0; }
+    .lead { color: var(--muted); }
+
+    .callout {
+      margin: 18px 0;
+      padding: 15px 17px;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      background: var(--primary-soft);
+    }
+    .callout.warn { border-color: var(--amber); background: var(--amber-soft); }
+    .callout.good { border-color: var(--green); background: var(--green-soft); }
+    .callout.bad { border-color: var(--red); background: var(--red-soft); }
+
+    .grid-2, .grid-3 {
+      display: grid;
+      gap: 14px;
+    }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card {
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface-2);
+    }
+    .card h3, .card h4 { margin: 0 0 7px; }
+    .card p:last-child { margin-bottom: 0; }
+    .kicker { color: var(--primary-2); font-size: .82rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+
+    .tasks { display: grid; gap: 9px; margin: 16px 0; }
+    .task {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--surface);
+    }
+    .task input { width: 19px; height: 19px; margin-top: 3px; accent-color: #315efb; }
+    .task.done span { color: var(--muted); text-decoration: line-through; }
+
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+    .tab {
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--surface);
+    }
+    .tab.active { color: var(--primary-2); border-color: var(--primary); background: var(--primary-soft); }
+    .plan-panel[hidden] { display: none; }
+    .timeline { display: grid; gap: 0; margin: 12px 0; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .timeline-item:last-child { border-bottom: 0; }
+    .time { color: var(--primary-2); font-weight: 800; }
+
+    .lesson-map {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin: 18px 0;
+    }
+    .lesson-map div {
+      position: relative;
+      padding: 15px 10px;
+      border-radius: 12px;
+      text-align: center;
+      color: var(--primary-2);
+      background: var(--primary-soft);
+      font-weight: 700;
+    }
+    .lesson-map div:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      color: var(--muted);
+    }
+
+    details {
+      margin: 12px 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+    summary { padding: 13px 15px; cursor: pointer; font-weight: 700; }
+    details > div { padding: 0 16px 16px; }
+    .source-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    label.field {
+      display: grid;
+      gap: 7px;
+      margin: 14px 0;
+      font-weight: 700;
+    }
+    .hint { color: var(--muted); font-size: .88rem; font-weight: 400; }
+    input[type="text"], input[type="number"], textarea, select {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--text);
+      background: var(--surface);
+    }
+    textarea { min-height: 108px; resize: vertical; line-height: 1.65; }
+    .short { min-height: 72px; }
+    .output {
+      min-height: 74px;
+      padding: 14px;
+      border: 1px dashed var(--primary);
+      border-radius: 12px;
+      color: var(--primary-2);
+      background: var(--primary-soft);
+      font-weight: 700;
+    }
+
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .pill { padding: 5px 10px; border-radius: 999px; color: var(--muted); background: var(--surface-2); font-size: .88rem; }
+
+    .quiz-item {
+      margin: 16px 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+    }
+    .quiz-item.correct { border-color: var(--green); background: var(--green-soft); }
+    .quiz-item.wrong { border-color: var(--red); background: var(--red-soft); }
+    .quiz-options { display: grid; gap: 8px; margin-top: 10px; }
+    .quiz-options label { display: flex; gap: 9px; align-items: flex-start; }
+    .quiz-explain { display: none; margin: 10px 0 0; color: var(--muted); }
+    .quiz-item.checked .quiz-explain { display: block; }
+    .score { font-size: 1.18rem; font-weight: 800; }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .data-grid label { font-size: .86rem; font-weight: 700; }
+    .data-grid input { margin-top: 5px; }
+
+    .source-list li { margin: 7px 0; }
+    .small { color: var(--muted); font-size: .88rem; }
+    .separator { height: 1px; margin: 24px 0; background: var(--line); }
+    .nowrap { white-space: nowrap; }
+
+    footer {
+      padding: 30px 20px 60px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .88rem;
+    }
+
+    @media (max-width: 960px) {
+      .page { grid-template-columns: 1fr; }
+      .side { position: static; }
+      .side-nav { display: flex; gap: 4px; overflow-x: auto; }
+      .side-nav a { white-space: nowrap; }
+      .hero-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .topbar { align-items: flex-start; }
+      .top-actions .button span { display: none; }
+      .hero { padding-top: 42px; }
+      .grid-2, .grid-3, .data-grid { grid-template-columns: 1fr; }
+      .lesson-map { grid-template-columns: 1fr; }
+      .lesson-map div:not(:last-child)::after { content: "↓"; right: 50%; top: auto; bottom: -17px; transform: translateX(50%); }
+      .timeline-item { grid-template-columns: 64px 1fr; }
+    }
+    @media print {
+      .topbar, .side, .tabs, .button, #quiz-actions { display: none !important; }
+      body { background: #fff; color: #111; }
+      .page { display: block; padding: 0; }
+      section { break-inside: avoid; box-shadow: none; border-color: #bbb; }
+      .hero { padding: 28px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">W1</span><span>编导 × 个人IP</span></div>
+    <div class="top-actions">
+      <button class="button" id="theme-button" type="button" title="切换明暗主题">◐ <span>主题</span></button>
+      <button class="button" id="print-button" type="button">⎙ <span>打印 / PDF</span></button>
+      <button class="button primary" id="export-button" type="button">⇩ <span>导出学习记录</span></button>
+    </div>
+  </header>
+
+  <header class="hero">
+    <span class="eyebrow">12周学习方案 · WEEK 01</span>
+    <h1>定位、目标与基线作品</h1>
+    <p class="hero-copy">第一周不追求“学会所有技巧”，只完成一件重要的事：把当前账号定位拆成可执行判断，并用一条按现有能力完成的作品建立真实基线。</p>
+    <div class="hero-grid" aria-label="本周概览">
+      <div class="metric"><strong>8—12h</strong><span>建议投入</span></div>
+      <div class="metric"><strong>2份</strong><span>指定学习资料</span></div>
+      <div class="metric"><strong>1条</strong><span>可发布基线作品</span></div>
+      <div class="metric"><strong>T+3</strong><span>首次数据复盘</span></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-head"><span>本周完成度</span><strong id="progress-text">0%</strong></div>
+      <div class="progress-track" role="progressbar" aria-label="本周完成度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page">
+    <aside class="side">
+      <nav class="side-nav" aria-label="页面目录">
+        <a href="#goal">本周关卡</a>
+        <a href="#schedule">学习日程</a>
+        <a href="#lesson-a">课程一：定位</a>
+        <a href="#lesson-b">课程二：人设</a>
+        <a href="#worksheet">定位练习</a>
+        <a href="#baseline">基线作品</a>
+        <a href="#teardown">爆款拆解</a>
+        <a href="#quiz">掌握测验</a>
+        <a href="#review">发布与复盘</a>
+        <a href="#sources">资料来源</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="goal">
+        <span class="kicker">01 · THE GATE</span>
+        <h2>本周过关标准</h2>
+        <p class="lead">不是“课程看完了”，而是下面六项都留下可检查的产出。</p>
+        <div class="tasks">
+          <label class="task"><input type="checkbox" data-task="read-a"><span>完成《01-定位和策划思维》的学习，并写出一句自己的理解。</span></label>
+          <label class="task"><input type="checkbox" data-task="read-b"><span>完成全域获客课 Day1 的重点学习，分清人群、价值与人设。</span></label>
+          <label class="task"><input type="checkbox" data-task="positioning"><span>用自己的话写清：目标观众、具体问题、真实价值、内容作用。</span></label>
+          <label class="task"><input type="checkbox" data-task="teardown"><span>拆解 1 条真实爆款，只观察它为谁解决什么问题。</span></label>
+          <label class="task"><input type="checkbox" data-task="publish"><span>完成并发布 1 条基线作品，发布前写下预测。</span></label>
+          <label class="task"><input type="checkbox" data-task="retro"><span>T+3 登记数据与评论，定位本周最卡的环节。</span></label>
+        </div>
+        <div class="callout good"><strong>本周唯一训练能力：</strong>把“我想讲什么”改写为“这条内容帮助谁解决什么问题”。</div>
+        <div class="grid-3">
+          <div class="card"><h3>不要重做定位</h3><p>当前 v0.2 是本周实验假设。先发布，不能因为一条内容的结果推翻它。</p></div>
+          <div class="card"><h3>不要堆新技巧</h3><p>基线作品按现有能力完成。否则之后无法判断进步究竟来自哪里。</p></div>
+          <div class="card"><h3>不要囤课</h3><p>课程学习最多占本周 20%。时间不足时减少阅读，不取消发布和复盘。</p></div>
+        </div>
+      </section>
+
+      <section id="schedule">
+        <span class="kicker">02 · PLAN</span>
+        <h2>第一周执行日程</h2>
+        <p class="lead">默认采用两天版；如果只有一天，切换到压缩版。两种版本都保留“发布”和“T+3复盘”。</p>
+        <div class="tabs" role="tablist" aria-label="日程模式">
+          <button class="tab active" type="button" data-plan-button="two" role="tab" aria-selected="true">两天版 · 推荐</button>
+          <button class="tab" type="button" data-plan-button="one" role="tab" aria-selected="false">一天版 · 8小时</button>
+        </div>
+        <div class="plan-panel" data-plan-panel="two">
+          <h3>学习日｜约 3.5 小时</h3>
+          <div class="timeline">
+            <div class="timeline-item"><div class="time">15 min</div><div><strong>写基线判断</strong><br><span class="small">不看课程，先回答：我的观众是谁、他卡在哪里、我能提供什么。</span></div></div>
+            <div class="timeline-item"><div class="time">45 min</div><div><strong>学习课程一</strong><br><span class="small">只抓定位的经营决策，不抄长篇笔记。</span></div></div>
+            <div class="timeline-item"><div class="time">35 min</div><div><strong>学习课程二</strong><br><span class="small">重点学习人群、价值、人设与 AI 的责任边界。</span></div></div>
+            <div class="timeline-item"><div class="time">40 min</div><div><strong>完成定位练习</strong><br><span class="small">把现有 v0.2 定位改写成四个可执行问题。</span></div></div>
+            <div class="timeline-item"><div class="time">45 min</div><div><strong>单项拆解一条爆款</strong><br><span class="small">只拆“为谁解决什么问题”，不做全维度分析。</span></div></div>
+            <div class="timeline-item"><div class="time">30 min</div><div><strong>确定基线选题</strong><br><span class="small">推荐使用现有选题 01，并列出可追溯来源。</span></div></div>
+          </div>
+          <h3>制作日｜约 7—8 小时</h3>
+          <div class="timeline">
+            <div class="timeline-item"><div class="time">90 min</div><div><strong>素材包与一句话主旨</strong><br><span class="small">区分来源说法、个人分析和可借鉴方法。</span></div></div>
+            <div class="timeline-item"><div class="time">90 min</div><div><strong>完成口播稿和最小镜头表</strong><br><span class="small">按现有能力完成，不刻意使用后续课程技巧。</span></div></div>
+            <div class="timeline-item"><div class="time">4 h</div><div><strong>拍摄与剪辑</strong><br><span class="small">记录实际耗时和最卡的环节。</span></div></div>
+            <div class="timeline-item"><div class="time">30 min</div><div><strong>预测并发布</strong><br><span class="small">在看到真实数据前写下预测，发布后不回改。</span></div></div>
+          </div>
+          <h3>T+3｜45 分钟</h3>
+          <p>登记后台可见数据、观众评论、主要问题和下一条只改变的变量。</p>
+        </div>
+        <div class="plan-panel" data-plan-panel="one" hidden>
+          <div class="timeline">
+            <div class="timeline-item"><div class="time">30 min</div><div><strong>课程速学</strong><br><span class="small">阅读本页两节核心内容，原始资料课后补。</span></div></div>
+            <div class="timeline-item"><div class="time">30 min</div><div><strong>定位练习</strong><br><span class="small">完成四个核心问题和一句话定位。</span></div></div>
+            <div class="timeline-item"><div class="time">30 min</div><div><strong>爆款单项拆解</strong><br><span class="small">只记录目标人群、具体问题与价值承诺。</span></div></div>
+            <div class="timeline-item"><div class="time">60 min</div><div><strong>素材包</strong><br><span class="small">核对现有来源，确定可以说和不能说的内容。</span></div></div>
+            <div class="timeline-item"><div class="time">90 min</div><div><strong>大纲与脚本</strong><br><span class="small">先一句话结论，再写必要支撑点。</span></div></div>
+            <div class="timeline-item"><div class="time">3 h</div><div><strong>拍摄与剪辑</strong><br><span class="small">采用自己当前最熟悉的形式。</span></div></div>
+            <div class="timeline-item"><div class="time">30 min</div><div><strong>预测与发布</strong><br><span class="small">记录预测、发布时间与平台。</span></div></div>
+            <div class="timeline-item"><div class="time">T+3</div><div><strong>30分钟复盘</strong><br><span class="small">学习当天不硬塞复盘；数据到期后单独完成。</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lesson-a">
+        <span class="kicker">03 · LESSON A</span>
+        <h2>课程一：定位不是标签，而是一组经营决策</h2>
+        <p class="lead">来源：《01-定位和策划思维》。本周不需要重新发明赛道，只要理解定位由哪些判断共同组成。</p>
+        <div class="lesson-map" aria-label="定位决策地图">
+          <div>流量目的</div><div>人群 × 价值</div><div>内容类型</div><div>影像系统</div><div>真实的你</div>
+        </div>
+
+        <h3>1. 先问流量最终用来做什么</h3>
+        <p>课程用“摆地摊”和“买手店”区分两种经营方式：前者更关注单条转化和低成本复制，后者更关注个人 IP、信任和长期复利。它们是决策比喻，不是非黑即白的账号分类。</p>
+        <div class="callout"><strong>应用到你：</strong>个人账号目前产品和变现尚未完全确定，因此第一周不把内容写成强销售稿。先验证观众是否愿意持续看你解释 AI 生意。</div>
+
+        <h3>2. 垂直的核心是人群和价值连续一致</h3>
+        <p>“一直讲 AI”不一定构成有效垂直。更重要的是：内容是否持续服务相近的人群，是否反复解决相近层级的问题。你的暂定垂直不是泛 AI，而是帮助特定受众看懂 AI 如何连接需求、产品、获客和交付。</p>
+
+        <h3>3. 人群与价值是一体两面</h3>
+        <div class="grid-2">
+          <div class="card"><h3>人群不是人口标签</h3><p>除了年龄、职业，还要理解其认知状态、现实处境、近期问题、观看习惯和行动障碍。</p></div>
+          <div class="card"><h3>价值不是抽象“干货”</h3><p>价值必须落到一个具体变化：看懂、避免误判、作出选择、完成步骤或建立信任。</p></div>
+        </div>
+
+        <h3>4. 内容类型和影像系统从真实能力出发</h3>
+        <p>擅长表达可以先做讲述型，擅长拍摄可以先做呈现型。稳定的镜头、场景、节奏、审美和叙事腔调，需要多次作品后逐渐形成，第一周无需强行设计完整视觉风格。</p>
+
+        <h3>5. 人设不是虚构标签</h3>
+        <p>人设来自真实经历、能力、局限、价值观、做事方式和观众关系。你的可用真实信息包括：公司 Instagram 短视频运营经验、约 31 条内容的执行经验、匿名爆款案例、对内容获客结果的关注，以及曾被复杂 AI 成稿卡住的真实问题。</p>
+
+        <h3>定位的七个发散入口</h3>
+        <details>
+          <summary>展开查看七个入口</summary>
+          <div>
+            <ol>
+              <li>常规价值与明确目标。</li>
+              <li>在流程、行业、人群或理念上做细分。</li>
+              <li>给旧场景叠加新的价值。</li>
+              <li>把其他职业或领域的能力迁移进来。</li>
+              <li>寻找未被满足的人群和需求。</li>
+              <li>通过栏目化或任务化建立稳定内容容器。</li>
+              <li>从一个具体目标用户出发，围绕其多种真实问题提供综合价值。</li>
+            </ol>
+            <p class="small">这些入口用于发散，不代表本周要同时尝试七种定位。</p>
+          </div>
+        </details>
+
+        <label class="field">用一句自己的话复述这节课
+          <span class="hint">判断标准：不要出现“定位就是找赛道”这种空泛表达。</span>
+          <textarea class="short" data-save="lesson-a-summary" placeholder="例如：定位是围绕特定人群和价值，决定流量目的、内容形式以及真实的我怎样进入内容。"></textarea>
+        </label>
+        <div class="callout warn"><strong>使用边界：</strong>课程中的比较和公式是思考工具，不是已验证的平台普遍规律；不能为了人设制造经历或虚假反差。</div>
+      </section>
+
+      <section id="lesson-b">
+        <span class="kicker">04 · LESSON B</span>
+        <h2>课程二：趋势认知、人群价值与观众印象</h2>
+        <p class="lead">来源：全域获客课 Day1。本页提炼第一周需要的部分，并保留课程观点的归属。</p>
+
+        <h3>1. AI 降低工具门槛，但不替人负责</h3>
+        <div class="grid-2">
+          <div class="card"><h3>AI 可以协助</h3><p>搜索线索、整理材料、发散方向、比较版本、检查遗漏和降低部分制作门槛。</p></div>
+          <div class="card"><h3>人必须负责</h3><p>目标、选题框架、事实来源、真实经历、判断、审美、最终取舍和发布责任。</p></div>
+        </div>
+        <p>课程把 AI 比作“副驾驶”，这是方便理解的比喻。对你的账号尤其重要：中文二次整理只能提供选题线索，案例仍需找到本人视频、采访、品牌官网或公开账号。</p>
+
+        <h3>2. 强人设定位的三个问题</h3>
+        <div class="grid-3">
+          <div class="card"><span class="kicker">定人群</span><h3>你的观众是谁？</h3><p>不要回答“所有想赚钱的人”，要写出认知状态和当下处境。</p></div>
+          <div class="card"><span class="kicker">定价值</span><h3>你解决什么问题？</h3><p>用问题清单表达，不用“提供干货、赋能成长”这种抽象词。</p></div>
+          <div class="card"><span class="kicker">定人设</span><h3>观众会怎样记住你？</h3><p>人设是持续内容形成的综合印象，不是一次自我介绍或自封标签。</p></div>
+        </div>
+
+        <h3>3. 从宽泛知识进入用户的“近问题”</h3>
+        <p>Day1 课程强调，不要只讲自己的知识体系，而要让专业能力解决观众眼前的问题。对本账号来说，“AI 怎样赚钱”太宽；“普通人说用 AI 赚钱，真正卖给用户的是什么”更接近一个可以被回答的问题。</p>
+        <div class="callout good"><strong>判断方法：</strong>删掉标题里的行业名后，如果剩下的仍只是“怎么做、如何赚钱、全面解析”，通常还不够具体。</div>
+
+        <h3>4. 六种竞争方向只用于发散</h3>
+        <div class="pill-list" aria-label="六种竞争方向">
+          <span class="pill">降维：降低理解门槛</span>
+          <span class="pill">反向：挑战常见做法</span>
+          <span class="pill">价值叠加：组合两类价值</span>
+          <span class="pill">借势：借已有关注入口</span>
+          <span class="pill">能力迁移：把旧能力带进新领域</span>
+          <span class="pill">以弱显强：真实局限形成视角</span>
+        </div>
+        <p>本周不要求使用这些策略。它们只能基于真实能力与材料发散，不能制造经历、效果或冲突。</p>
+
+        <h3>5. 人设来自持续可见的做事方式</h3>
+        <p>你可以逐步让观众看到：你会追原始来源、会把复杂案例拆成步骤、会区分营收和利润、会说明案例的成立条件，也愿意公开哪些环节尚未核验。这些比“我是一个严谨的人”更可信。</p>
+
+        <details>
+          <summary>查看 Day1 原始课程笔记图</summary>
+          <div>
+            <p class="small">图片内容属于课程笔记；其中关于平台趋势、算法和年份的判断未在本任务中独立核验。</p>
+            <img class="source-image" src="./课件图片/内容时代的全域获客课-2026-02-26至03-01/Day1-课程笔记.png" alt="内容时代的全域获客课 Day1 课程笔记思维导图">
+          </div>
+        </details>
+
+        <label class="field">写出这节课对你最有用的一条判断
+          <textarea class="short" data-save="lesson-b-summary" placeholder="例如：观众不需要我展示完整知识体系，而需要我用专业能力解决一个离他更近的问题。"></textarea>
+        </label>
+        <div class="callout warn"><strong>时效提示：</strong>课程对 AI、流量环境、算法方向和“最佳时机”的表述属于授课者观点。实际运营时以你所在平台的后台数据和官方信息为准。</div>
+      </section>
+
+      <section id="worksheet">
+        <span class="kicker">05 · WORKSHEET</span>
+        <h2>定位练习：把 v0.2 拆成四个可执行问题</h2>
+        <p class="lead">下面已放入定位文件中的真实信息作为起点。你的任务不是写得更宏大，而是删掉模糊词，让下一条内容可以执行。</p>
+
+        <div class="callout">
+          <strong>当前 v0.2 假设：</strong><br>
+          我通过查找原始来源、拆解海外 AI 生意案例，并用大白话整理成普通人可以理解的步骤，帮助会简单使用 AI、但不知道如何变现的人，看懂案例呈现的商业逻辑，不只被夸张数字吸引。
+        </div>
+
+        <label class="field">1. 目标观众
+          <span class="hint">写认知状态和现实处境，不只写年龄、职业或“普通人”。</span>
+          <textarea class="short" data-save="audience">听说过 AI，也会简单使用，但不知道怎样把 AI 和真实需求、产品及赚钱连接起来的人。</textarea>
+        </label>
+        <label class="field">2. 他现在最具体的问题
+          <span class="hint">本周只写一个近问题。它应该能被一条 60—120 秒内容回答。</span>
+          <textarea class="short" data-save="problem">刷到大量“用 AI 赚钱”的案例，却不知道案例究竟卖什么、用户为什么付钱，也分不清销售额、利润和商业模式。</textarea>
+        </label>
+        <label class="field">3. 我能提供的真实价值
+          <span class="hint">只能使用已有真实能力，不把学习对象的经历写成自己的。</span>
+          <textarea class="short" data-save="value">根据匿名短视频运营和内容获客经验，从中文二次内容寻找线索，再查本人视频、采访、品牌官网或公开账号，把需求、产品、获客和交付拆成大白话步骤。</textarea>
+        </label>
+        <label class="field">4. 内容最终作用
+          <span class="hint">可选择“看懂、避免误判、建立信任、采取下一步”等具体变化。</span>
+          <textarea class="short" data-save="effect">先帮助观众看懂 AI 生意案例并减少被夸张数字误导，同时逐步建立对账号研究方法和判断过程的信任。</textarea>
+        </label>
+        <label class="field">5. Why you：为什么由你来讲
+          <span class="hint">写真实证据与独特视角，不写“热爱、努力、有梦想”。公司和账号名称继续匿名。</span>
+          <textarea data-save="why-you">我负责公司 Instagram 短视频账号，做过约 31 条内容，其中约 11 条播放超过 10 万；我既关心内容怎样吸引人，也关注它怎样连接涨粉、获客和生意结果。同时我正在真实实践如何用 AI 找选题、整理资料和简化脚本。</textarea>
+        </label>
+        <div class="grid-2">
+          <label class="field">本周内容主要作用
+            <select data-save="content-role">
+              <option value="拉新">拉新：让目标观众第一次看见</option>
+              <option value="信任" selected>信任：让观众理解你的判断</option>
+              <option value="转化">转化：促成明确行动</option>
+            </select>
+          </label>
+          <label class="field">本周定位状态
+            <select data-save="position-status">
+              <option value="实验假设" selected>实验假设</option>
+              <option value="已有重复证据">已有重复证据</option>
+              <option value="准备调整">准备调整</option>
+            </select>
+          </label>
+        </div>
+        <button class="button primary" id="generate-position" type="button">生成本周定位句</button>
+        <div class="output" id="position-output" aria-live="polite">填写上方内容后，点击“生成本周定位句”。</div>
+      </section>
+
+      <section id="baseline">
+        <span class="kicker">06 · BASELINE WORK</span>
+        <h2>基线作品：先测真实起点</h2>
+        <p class="lead">推荐从现有选题池选择材料基本够用、又最贴近当前定位的一题。</p>
+        <div class="callout good">
+          <strong>推荐选题：</strong>普通人说“用 AI 赚钱”，真正卖给用户的是什么？<br>
+          <span class="small">推荐原因：目标观众明确，现有素材基本够用，不需要依赖尚未核验的海外营收数字。</span>
+        </div>
+        <p><a href="../../04_选题库/选题池.md">打开现有选题池</a> · <a href="./15-编导与个人IP十二周学习方案.md">返回十二周方案</a></p>
+
+        <label class="field">本周最终选题
+          <input type="text" data-save="topic" value="普通人说“用 AI 赚钱”，真正卖给用户的是什么？">
+        </label>
+        <label class="field">一句话主旨
+          <span class="hint">只写观众看完必须记住的一句话。</span>
+          <textarea class="short" data-save="thesis">普通人用 AI 赚钱时，真正被购买的不是“会用 AI”，而是针对真实需求提供的明确结果和交付。</textarea>
+        </label>
+        <label class="field">主要事实与素材来源
+          <span class="hint">写具体文件路径或原始来源；中文二次内容只作为线索时要明确标注。</span>
+          <textarea data-save="sources">02_内容素材/除了打工，用心给大家整理了16条路. 建议点赞收藏，欢迎评论区一起交流.#未来发展方向 #认知变现 #打工人逆袭_7546212425998454074/笔记信息.md
+02_内容素材/普通人赚钱第一步：先别小看自己会的东西 #自媒体#赚钱 #商机 #商机洞察_7667189283152849657/笔记信息.md
+02_内容素材/（实例）在AI时代下，做个“资料搬运工”未尝不可. #AI应用#信息差 #虚拟资料 #搬运工_7563946065574939962/笔记信息.md</textarea>
+        </label>
+        <div class="grid-2">
+          <label class="field">这条内容允许说什么
+            <textarea data-save="allowed-claims">可以解释服务、数字产品、内容获客等交付方式；可以说明 AI 适合协助整理、生成和提效；可以强调用户购买的是问题解决结果。</textarea>
+          </label>
+          <label class="field">这条内容不能说什么
+            <textarea data-save="blocked-claims">不把二次素材写成已经独立核验的普遍事实；不承诺使用 AI 就能赚钱；不使用本人没有跑通过的赚钱效果和收益数字。</textarea>
+          </label>
+        </div>
+        <label class="field">最小内容大纲
+          <span class="hint">基线作品不要求新结构；按你当前最自然的顺序写。</span>
+          <textarea data-save="outline" placeholder="1. 观众常见误解&#10;2. 真正被购买的是什么&#10;3. 三种可理解的交付例子&#10;4. AI 在其中负责什么、不负责什么&#10;5. 一句话结论"></textarea>
+        </label>
+        <label class="field">最小镜头表
+          <span class="hint">只列能完成拍摄的版本，不追求第七周才训练的复杂影像设计。</span>
+          <textarea data-save="shot-list" placeholder="镜头1：正面口播，提出问题&#10;镜头2：字幕列出“服务 / 数字产品 / 内容获客”&#10;镜头3：画面展示流程图或手写步骤&#10;镜头4：回到口播，说明 AI 的边界"></textarea>
+        </label>
+
+        <h3>制作完成检查</h3>
+        <div class="tasks">
+          <label class="task"><input type="checkbox" data-save-check="brief"><span>选题卡、目标人群和一句话主旨已完成。</span></label>
+          <label class="task"><input type="checkbox" data-save-check="fact-check"><span>每个具体说法都能找到来源或明确写成个人分析。</span></label>
+          <label class="task"><input type="checkbox" data-save-check="script"><span>口播稿可自然说出，没有复杂 AI 腔和无关段落。</span></label>
+          <label class="task"><input type="checkbox" data-save-check="shot"><span>镜头表是本周可以真实完成的版本。</span></label>
+          <label class="task"><input type="checkbox" data-save-check="video"><span>成片已导出并完成发布前检查。</span></label>
+        </div>
+      </section>
+
+      <section id="teardown">
+        <span class="kicker">07 · TEARDOWN</span>
+        <h2>爆款单项拆解：只看“为谁解决什么”</h2>
+        <p class="lead">选择与你目标人群、内容形态相近的真实爆款。安先生属于知识学习对象，不拿来模仿标题、开头、结构或表达风格。</p>
+        <label class="field">具体来源
+          <span class="hint">填写账号、作品标题、链接或 Vault 内具体文件路径。</span>
+          <input type="text" data-save="tear-source" placeholder="账号 / 标题 / URL / 具体文件路径">
+        </label>
+        <div class="grid-2">
+          <label class="field">它写给谁
+            <textarea class="short" data-save="tear-audience" placeholder="写认知状态和具体处境。"></textarea>
+          </label>
+          <label class="field">它点中了什么近问题
+            <textarea class="short" data-save="tear-problem" placeholder="观众此刻真正关心的是什么？"></textarea>
+          </label>
+          <label class="field">它承诺了什么价值
+            <textarea class="short" data-save="tear-value" placeholder="看完后，观众会发生什么具体变化？"></textarea>
+          </label>
+          <label class="field">为什么可能愿意关注
+            <textarea class="short" data-save="tear-follow" placeholder="单条问题之外，它建立了什么持续期待？"></textarea>
+          </label>
+        </div>
+        <label class="field">本周可迁移的一条原则
+          <textarea class="short" data-save="tear-principle" placeholder="只写一条，并保留适用范围。例如：在这条样本中，先点出错误理解，再解释付费结果，让抽象话题更接近用户问题。"></textarea>
+        </label>
+        <label class="field">不能复制的账号条件或表达
+          <textarea class="short" data-save="tear-boundary" placeholder="例如：对方的身份背书、个人经历、素材授权、表演方式或粉丝基础。"></textarea>
+        </label>
+      </section>
+
+      <section id="quiz">
+        <span class="kicker">08 · QUIZ</span>
+        <h2>第一周掌握测验</h2>
+        <p class="lead">建议定位练习完成后再答。达到 7/8 即可，不需要背课程原话。</p>
+        <form id="quiz-form">
+          <div class="quiz-item" data-answer="b">
+            <strong>1. 本周对“定位”最准确的理解是：</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q1" value="a">给账号选一个热门赛道标签。</label>
+              <label><input type="radio" name="q1" value="b">围绕流量目的、人群、价值、内容形式、影像和真实创作者作经营决策。</label>
+              <label><input type="radio" name="q1" value="c">在第一条视频前想出永远不变的定位。</label>
+            </div>
+            <p class="quiz-explain">定位是一张决策地图，不是单一标签，也允许通过实践逐步演化。</p>
+          </div>
+          <div class="quiz-item" data-answer="c">
+            <strong>2. “人设”最接近下面哪一种？</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q2" value="a">一句自我介绍。</label>
+              <label><input type="radio" name="q2" value="b">自己设计的反差标签。</label>
+              <label><input type="radio" name="q2" value="c">观众从持续内容、经历、判断和做事方式中形成的综合印象。</label>
+            </div>
+            <p class="quiz-explain">人设是观众感知，不是创作者单方面宣布。</p>
+          </div>
+          <div class="quiz-item" data-answer="a">
+            <strong>3. 对个人账号来说，更有意义的“垂直”是：</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q3" value="a">持续服务相近人群和价值需求。</label>
+              <label><input type="radio" name="q3" value="b">每条标题都必须出现“AI”。</label>
+              <label><input type="radio" name="q3" value="c">永远只讲一个工具。</label>
+            </div>
+            <p class="quiz-explain">赛道词相同不代表观众会持续观看，关键是人群和价值的连续一致。</p>
+          </div>
+          <div class="quiz-item" data-answer="b">
+            <strong>4. 使用 AI 辅助创作时，哪项仍必须由人负责？</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q4" value="a">把一组材料重新排序。</label>
+              <label><input type="radio" name="q4" value="b">确认事实来源、使用真实经历并完成最终判断。</label>
+              <label><input type="radio" name="q4" value="c">生成十个候选说法。</label>
+            </div>
+            <p class="quiz-explain">AI 可以整理和发散，人负责目标、事实、经历、判断、审美和最终取舍。</p>
+          </div>
+          <div class="quiz-item" data-answer="c">
+            <strong>5. 第一周的基线作品应该怎样完成？</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q5" value="a">尽可能套用所有新学技巧。</label>
+              <label><input type="radio" name="q5" value="b">等十二周课程全部看完再发。</label>
+              <label><input type="radio" name="q5" value="c">按当前能力完成，记录耗时和卡点，建立真实起点。</label>
+            </div>
+            <p class="quiz-explain">基线要反映当前能力；一次改变太多变量，会失去可比较性。</p>
+          </div>
+          <div class="quiz-item" data-answer="a">
+            <strong>6. 第一条内容数据不好，应该马上改定位吗？</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q6" value="a">不应该，先结合选题、开头、结构、表达、画面和评论诊断。</label>
+              <label><input type="radio" name="q6" value="b">应该，单条数据已经能证明观众不需要这个方向。</label>
+              <label><input type="radio" name="q6" value="c">只要播放低，就一定是平台没有推流。</label>
+            </div>
+            <p class="quiz-explain">一条内容不足以改变定位；数据问题也不能自动归因于定位或平台。</p>
+          </div>
+          <div class="quiz-item" data-answer="b">
+            <strong>7. “知识学习对象”和“内容对标样本”的边界是：</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q7" value="a">两者都用来复制标题和表达风格。</label>
+              <label><input type="radio" name="q7" value="b">前者学习方法和判断，后者才用于观察真实内容结构与表现。</label>
+              <label><input type="radio" name="q7" value="c">前者的数据更大，所以可以直接当平台规律。</label>
+            </div>
+            <p class="quiz-explain">安先生课程只用于专业知识与方法学习，不作为标题、开头、结构或风格对标。</p>
+          </div>
+          <div class="quiz-item" data-answer="c">
+            <strong>8. 哪一项最能证明第一周真正完成？</strong>
+            <div class="quiz-options">
+              <label><input type="radio" name="q8" value="a">收藏了很多课程资料。</label>
+              <label><input type="radio" name="q8" value="b">写出一个听起来更高级的新定位。</label>
+              <label><input type="radio" name="q8" value="c">完成定位练习、发布基线作品，并留下预测与 T+3 复盘。</label>
+            </div>
+            <p class="quiz-explain">学习的证据是作品和复盘，而不是输入数量。</p>
+          </div>
+        </form>
+        <div id="quiz-actions">
+          <button class="button primary" id="check-quiz" type="button">检查答案</button>
+          <button class="button" id="reset-quiz" type="button">重新作答</button>
+        </div>
+        <p class="score" id="quiz-score" aria-live="polite"></p>
+      </section>
+
+      <section id="review">
+        <span class="kicker">09 · PUBLISH & RETRO</span>
+        <h2>发布前预测与 T+3 复盘</h2>
+        <p class="lead">先预测、后看数据。预测不是为了猜中播放量，而是让你明确本条内容到底在验证什么。</p>
+
+        <h3>发布前：看到真实数据之前填写</h3>
+        <div class="grid-2">
+          <label class="field">平台
+            <input type="text" data-save="platform" placeholder="例如：小红书 / 抖音 / Instagram">
+          </label>
+          <label class="field">计划发布时间
+            <input type="text" data-save="publish-time" placeholder="YYYY-MM-DD HH:mm">
+          </label>
+        </div>
+        <label class="field">本条内容验证的核心假设
+          <textarea class="short" data-save="hypothesis" placeholder="例如：对“会用AI但不知道如何变现”的观众，解释“真正卖的是交付结果”会带来与需求、产品有关的精准评论。"></textarea>
+        </label>
+        <label class="field">本周只改变的主要变量
+          <select data-save="main-variable">
+            <option value="基线，不主动改变新变量" selected>基线，不主动改变新变量</option>
+            <option value="选题">选题</option>
+            <option value="开头">开头</option>
+            <option value="结构">结构</option>
+            <option value="表达">表达</option>
+            <option value="画面">画面</option>
+            <option value="人物信息">人物信息</option>
+          </select>
+        </label>
+        <label class="field">定性预测
+          <textarea data-save="prediction" placeholder="我预计哪些人会停留？他们可能收藏、评论或关注的原因是什么？这条内容最可能失败在哪里？"></textarea>
+        </label>
+
+        <div class="separator"></div>
+        <h3>T+3：真实数据</h3>
+        <div class="data-grid">
+          <label>播放 / 触达<input type="number" min="0" data-save="views"></label>
+          <label>平均观看<input type="text" data-save="avg-watch" placeholder="秒或百分比"></label>
+          <label>完播率<input type="text" data-save="completion" placeholder="%"></label>
+          <label>点赞<input type="number" min="0" data-save="likes"></label>
+          <label>评论<input type="number" min="0" data-save="comments"></label>
+          <label>收藏<input type="number" min="0" data-save="saves"></label>
+          <label>分享<input type="number" min="0" data-save="shares"></label>
+          <label>主页访问<input type="number" min="0" data-save="profile-visits"></label>
+          <label>新增关注<input type="number" min="0" data-save="follows"></label>
+          <label>有效咨询<input type="number" min="0" data-save="inquiries"></label>
+        </div>
+        <label class="field">观众反复提到了什么
+          <textarea class="short" data-save="comment-signal" placeholder="复制或概括真实评论，不编造观众需求。"></textarea>
+        </label>
+        <label class="field">观众误解了什么、还想看什么
+          <textarea class="short" data-save="misunderstanding" placeholder="区分主旨被误解、信息缺口和新的选题线索。"></textarea>
+        </label>
+        <div class="grid-2">
+          <label class="field">问题主要发生在哪里
+            <select data-save="diagnosis">
+              <option value="">发布后选择</option>
+              <option>选题</option><option>开头</option><option>结构</option><option>表达</option>
+              <option>画面</option><option>信任</option><option>转化</option><option>暂时无法判断</option>
+            </select>
+          </label>
+          <label class="field">实际总耗时
+            <input type="text" data-save="actual-time" placeholder="例如：9.5小时">
+          </label>
+        </div>
+        <label class="field">本周最卡的环节
+          <textarea class="short" data-save="bottleneck" placeholder="描述具体动作，不写“能力不够”。"></textarea>
+        </label>
+        <div class="grid-2">
+          <label class="field">下一条保留什么
+            <textarea class="short" data-save="keep" placeholder="保留已经有信号支持的部分。"></textarea>
+          </label>
+          <label class="field">下一条只改变什么
+            <textarea class="short" data-save="change" placeholder="只写一个主要变量。"></textarea>
+          </label>
+        </div>
+
+        <div class="callout warn"><strong>不要过度解释：</strong>如果选题、开头、时长、画面和发布时间同时变化，本周只能写“暂时无法判断”，不能把结果归因于某一个因素。</div>
+      </section>
+
+      <section id="sources">
+        <span class="kicker">10 · SOURCES</span>
+        <h2>本学习包使用的资料</h2>
+        <ul class="source-list">
+          <li><a href="./15-编导与个人IP十二周学习方案.md">15-编导与个人IP十二周学习方案.md</a></li>
+          <li><a href="./01-定位和策划思维.md">01-定位和策划思维.md</a></li>
+          <li><a href="./12-内容时代的全域获客课-2026-02-26至03-01.md">12-内容时代的全域获客课-2026-02-26至03-01.md</a></li>
+          <li><a href="./新增课程逐字稿/内容时代的全域获客课-2026-02-26至03-01/022-第一节课.md">022-第一节课.md</a></li>
+          <li><a href="../../00_个人背景/定位总览_v0.1.md">定位总览_v0.1.md（正文版本 v0.2）</a></li>
+          <li><a href="../../04_选题库/选题池.md">04_选题库/选题池.md</a></li>
+        </ul>
+        <div class="callout bad">
+          <strong>资料完整性提醒：</strong>“022-第一节课”原始逐字稿达到 Excel 单元格 32,767 字符上限，源文件疑似截断，不能视为完整逐字稿。本页以已整理课程文件、课程笔记图和可追溯内容为依据，没有自行补全缺失课程。
+        </div>
+        <p class="small">课程中的成绩、平台判断、算法说法和趋势结论均属于授课者或课程材料，不代表本页已独立核验。学习时提取方法，发布内容时仍需遵守当前 Vault 的事实核验规则。</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    第一周完整学习包 · 生成于 2026-08-16 · 所有填写内容默认仅保存在本机浏览器
+  </footer>
+
+  <script>
+    (function () {
+      var storageKey = "director-ip-week1-v1";
+      var taskKey = "director-ip-week1-tasks-v1";
+      var checkKey = "director-ip-week1-checks-v1";
+      var themeKey = "director-ip-week1-theme";
+
+      function safeParse(value, fallback) {
+        try { return JSON.parse(value) || fallback; } catch (error) { return fallback; }
+      }
+
+      function loadObject(key) {
+        try { return safeParse(localStorage.getItem(key), {}); } catch (error) { return {}; }
+      }
+
+      function saveObject(key, value) {
+        try { localStorage.setItem(key, JSON.stringify(value)); } catch (error) {}
+      }
+
+      var saved = loadObject(storageKey);
+      var fields = document.querySelectorAll("[data-save]");
+      fields.forEach(function (field) {
+        var name = field.getAttribute("data-save");
+        if (Object.prototype.hasOwnProperty.call(saved, name)) field.value = saved[name];
+        field.addEventListener("input", function () {
+          saved[name] = field.value;
+          saveObject(storageKey, saved);
+        });
+      });
+
+      var taskState = loadObject(taskKey);
+      var taskBoxes = document.querySelectorAll("[data-task]");
+      taskBoxes.forEach(function (box) {
+        var name = box.getAttribute("data-task");
+        box.checked = Boolean(taskState[name]);
+        updateTaskStyle(box);
+        box.addEventListener("change", function () {
+          taskState[name] = box.checked;
+          saveObject(taskKey, taskState);
+          updateTaskStyle(box);
+          updateProgress();
+        });
+      });
+
+      var savedChecks = loadObject(checkKey);
+      var saveChecks = document.querySelectorAll("[data-save-check]");
+      saveChecks.forEach(function (box) {
+        var name = box.getAttribute("data-save-check");
+        box.checked = Boolean(savedChecks[name]);
+        updateTaskStyle(box);
+        box.addEventListener("change", function () {
+          savedChecks[name] = box.checked;
+          saveObject(checkKey, savedChecks);
+          updateTaskStyle(box);
+        });
+      });
+
+      function updateTaskStyle(box) {
+        var row = box.closest(".task");
+        if (row) row.classList.toggle("done", box.checked);
+      }
+
+      function updateProgress() {
+        var total = taskBoxes.length;
+        var done = Array.prototype.filter.call(taskBoxes, function (box) { return box.checked; }).length;
+        var percent = total ? Math.round(done / total * 100) : 0;
+        document.getElementById("progress-bar").style.width = percent + "%";
+        document.getElementById("progress-text").textContent = percent + "% · " + done + "/" + total;
+        document.querySelector(".progress-track").setAttribute("aria-valuenow", String(percent));
+      }
+      updateProgress();
+
+      document.querySelectorAll("[data-plan-button]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var target = button.getAttribute("data-plan-button");
+          document.querySelectorAll("[data-plan-button]").forEach(function (item) {
+            var active = item === button;
+            item.classList.toggle("active", active);
+            item.setAttribute("aria-selected", active ? "true" : "false");
+          });
+          document.querySelectorAll("[data-plan-panel]").forEach(function (panel) {
+            panel.hidden = panel.getAttribute("data-plan-panel") !== target;
+          });
+        });
+      });
+
+      function fieldValue(name) {
+        var field = document.querySelector('[data-save="' + name + '"]');
+        return field ? field.value.trim() : "";
+      }
+
+      function generatePosition() {
+        var audience = fieldValue("audience") || "目标观众";
+        var problem = fieldValue("problem") || "具体问题";
+        var value = fieldValue("value") || "真实价值";
+        var effect = fieldValue("effect") || "内容作用";
+        var sentence = "我通过" + value + "，帮助" + audience + "解决“" + problem + "”这个问题，让内容最终能够" + effect + "。";
+        document.getElementById("position-output").textContent = sentence;
+        saved.generatedPosition = sentence;
+        saveObject(storageKey, saved);
+      }
+      document.getElementById("generate-position").addEventListener("click", generatePosition);
+      if (saved.generatedPosition) document.getElementById("position-output").textContent = saved.generatedPosition;
+
+      document.getElementById("check-quiz").addEventListener("click", function () {
+        var items = document.querySelectorAll(".quiz-item");
+        var score = 0;
+        items.forEach(function (item, index) {
+          var selected = item.querySelector('input[name="q' + (index + 1) + '"]:checked');
+          var correct = selected && selected.value === item.getAttribute("data-answer");
+          item.classList.add("checked");
+          item.classList.toggle("correct", Boolean(correct));
+          item.classList.toggle("wrong", !correct);
+          if (correct) score += 1;
+        });
+        var verdict = score >= 7 ? "已过关，可以进入基线作品。" : "建议回看错题对应课程段落。";
+        document.getElementById("quiz-score").textContent = score + "/8 · " + verdict;
+        saved.quizScore = score;
+        saveObject(storageKey, saved);
+      });
+
+      document.getElementById("reset-quiz").addEventListener("click", function () {
+        document.getElementById("quiz-form").reset();
+        document.querySelectorAll(".quiz-item").forEach(function (item) {
+          item.classList.remove("checked", "correct", "wrong");
+        });
+        document.getElementById("quiz-score").textContent = "";
+        delete saved.quizScore;
+        saveObject(storageKey, saved);
+      });
+      if (typeof saved.quizScore === "number") {
+        document.getElementById("quiz-score").textContent = "上次得分：" + saved.quizScore + "/8";
+      }
+
+      function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        try { localStorage.setItem(themeKey, theme); } catch (error) {}
+      }
+      var initialTheme = "";
+      try { initialTheme = localStorage.getItem(themeKey) || ""; } catch (error) {}
+      if (!initialTheme && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) initialTheme = "dark";
+      setTheme(initialTheme || "light");
+      document.getElementById("theme-button").addEventListener("click", function () {
+        setTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
+      });
+
+      document.getElementById("print-button").addEventListener("click", function () { window.print(); });
+
+      function line(label, name) {
+        return "- " + label + "：" + (fieldValue(name) || "未填写");
+      }
+
+      document.getElementById("export-button").addEventListener("click", function () {
+        var completed = Array.prototype.map.call(taskBoxes, function (box) {
+          return "- [" + (box.checked ? "x" : " ") + "] " + box.closest(".task").innerText.trim();
+        }).join("\n");
+        var content = [
+          "# 第一周｜定位、目标与基线作品",
+          "",
+          "## 完成状态",
+          completed,
+          "",
+          "## 课程学习卡",
+          line("定位课复述", "lesson-a-summary"),
+          line("Day1最有用判断", "lesson-b-summary"),
+          "",
+          "## 定位练习",
+          line("目标观众", "audience"),
+          line("具体问题", "problem"),
+          line("真实价值", "value"),
+          line("内容作用", "effect"),
+          line("Why you", "why-you"),
+          "- 本周生成定位句：" + (saved.generatedPosition || "未生成"),
+          "",
+          "## 本周作品",
+          line("选题", "topic"),
+          line("一句话主旨", "thesis"),
+          line("素材来源", "sources"),
+          line("允许说", "allowed-claims"),
+          line("不能说", "blocked-claims"),
+          line("大纲", "outline"),
+          line("镜头表", "shot-list"),
+          "",
+          "## 爆款单项拆解",
+          line("具体来源", "tear-source"),
+          line("目标观众", "tear-audience"),
+          line("近问题", "tear-problem"),
+          line("价值承诺", "tear-value"),
+          line("关注理由", "tear-follow"),
+          line("可迁移原则", "tear-principle"),
+          line("不能复制", "tear-boundary"),
+          "",
+          "## 发布前预测",
+          line("平台", "platform"),
+          line("发布时间", "publish-time"),
+          line("核心假设", "hypothesis"),
+          line("主要变量", "main-variable"),
+          line("定性预测", "prediction"),
+          "",
+          "## T+3复盘",
+          line("播放或触达", "views"),
+          line("平均观看", "avg-watch"),
+          line("完播率", "completion"),
+          line("点赞", "likes"),
+          line("评论", "comments"),
+          line("收藏", "saves"),
+          line("分享", "shares"),
+          line("主页访问", "profile-visits"),
+          line("新增关注", "follows"),
+          line("有效咨询", "inquiries"),
+          line("评论信号", "comment-signal"),
+          line("误解与追问", "misunderstanding"),
+          line("主要问题", "diagnosis"),
+          line("实际总耗时", "actual-time"),
+          line("最卡环节", "bottleneck"),
+          line("下一条保留", "keep"),
+          line("下一条只改", "change")
+        ].join("\n");
+        var blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = "第一周-定位目标与基线作品-学习记录.md";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      });
+    })();
+  </script>
+</body>
+</html>

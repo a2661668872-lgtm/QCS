@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 单条选题"
+  short_description: "诊断、筛选或完善一条有来源且值得投入制作的短视频选题"
+  default_prompt: "使用 $qcs-topic 判断这条短视频选题是否值得做，并整理成可追溯的选题卡。"

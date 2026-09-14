@@ -1,0 +1,4 @@
+interface:
+  display_name: "航海选题助手"
+  short_description: "根据账号定位和新增素材，生成可追溯且去重的候选选题"
+  default_prompt: "使用 $shengcai-topic-generator 读取定位和新增素材，生成并追加不重复的候选选题。"

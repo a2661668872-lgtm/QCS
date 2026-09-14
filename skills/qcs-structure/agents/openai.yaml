@@ -1,0 +1,5 @@
+interface:
+  display_name: "QCS·结构设计"
+  short_description: "为已成立的短视频设计整条观看结构、推进动力与反馈点"
+  default_prompt: "使用 $qcs-structure 为这条短视频设计持续兑现承诺的整条观看结构。"
+

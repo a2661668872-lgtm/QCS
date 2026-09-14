@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 观看路径"
+  short_description: "检查观众从看见、理解、信任到行动的完整路径与流失点"
+  default_prompt: "使用 $qcs-viewer-path 检查这条短视频的完整观看路径，并找出最早的关键流失点。"
