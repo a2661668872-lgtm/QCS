@@ -185,8 +185,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "7ec9128d67776308",
+  "active": "0be4463c2f66fe29",
   "lastOpenFiles": [
+    "README.md",
+    "README.en.md",
     "07_AI编导系统/AI编导总纲.md",
     "07_AI编导系统/指标与内容目标字典.md",
     "07_AI编导系统/规则升级日志.md",
@@ -230,8 +232,6 @@
     "02_内容素材/不知道WorkBuddy可以做哪些事_给你一些思路欢迎补充_待补来源/笔记信息.md",
     "docs/superpowers/specs/2026-09-09-qcs-material-retrieval-design.md",
     "07_AI编导系统/当前导演规则.md",
-    "07_AI编导系统/单条编导卡/_说明.md",
-    "scripts/2026-09-08_965865427f6c_AI付费需求从哪里找.md",
-    "05_内容草稿/009_AI付费需求从哪里找_最终发布稿.md"
+    "07_AI编导系统/单条编导卡/_说明.md"
   ]
 }
