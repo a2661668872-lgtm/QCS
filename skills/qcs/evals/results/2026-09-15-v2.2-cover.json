@@ -1,0 +1,57 @@
+{
+  "candidate": "2026-09-15-v2.2-cover",
+  "environment": "Codex desktop, Windows, Vault source plus user-level Junctions",
+  "status": "pass_with_render_note",
+  "results": [
+    {
+      "id": "structure-validation",
+      "status": "pass",
+      "observed": [
+        "qcs-cover 的 quick_validate.py 通过",
+        "agents/openai.yaml 可解析，default_prompt 包含 $qcs-cover",
+        "qcs-cover 的两个必需参考文件存在并纳入工作区验证"
+      ]
+    },
+    {
+      "id": "installation-validation",
+      "status": "pass",
+      "observed": [
+        "安装脚本把 qcs-cover 纳入 QCS Skill 套件",
+        "首次执行新建 1 个 qcs-cover Junction",
+        "二次执行识别 12 个正确 Junction 并新建 0 个，幂等检查通过"
+      ]
+    },
+    {
+      "id": "workspace-validation",
+      "status": "pass",
+      "observed": [
+        "validate-workspace.ps1 检查 12 个 Skill、38 条课程映射、共享参考、封面参考、评测 JSON 和全部 Junction",
+        "工作区验证返回 Errors: 0",
+        "evals.json 可解析，包含 27 个唯一评测场景"
+      ]
+    },
+    {
+      "id": "routing-smoke",
+      "status": "pass",
+      "observed": [
+        "确认标题后的 Lovart 封面请求路由到 qcs-cover",
+        "只生成或修改封面标题文字的请求路由到 dbs-xhs-title",
+        "只设计视频正文镜头的请求路由到 qcs-visual",
+        "标题和封面都缺失时先处理标题，不自动串行运行 qcs-cover"
+      ]
+    },
+    {
+      "id": "cover-forward-smoke",
+      "status": "pass_with_render_note",
+      "observed": [
+        "人物型测试保持确认标题和人物参考边界，输出主方案与两个完整单变量版本",
+        "无人物型测试使用排版与真实内容关系完成封面，不因缺少人物而虚构人物或素材",
+        "来源数据型测试保留收入数字的访谈自述属性，未把官网产品页当成收入证明",
+        "三类测试均明确平台比例、候选配色、事实与隐私边界，且未调用图片生成工具"
+      ],
+      "note": "本 Skill 的交付范围是 Lovart 提示词；实际出图后的中文错字、截图变形、人物与文字遮挡仍需人工目检。"
+    }
+  ],
+  "regression": "本轮只新增 qcs-cover，并对 qcs 路由、安装器、验证器和评测做必要接入；未修改正文分镜 Skill、标题 Skill、现有内容稿或用户的 Obsidian 工作区状态。",
+  "highest_validation_level": 3
+}

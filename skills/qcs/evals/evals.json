@@ -6,14 +6,16 @@
       "识别用户当前创作阶段，不要求重走已完成步骤",
       "每次自动路由只选择并执行一个主 Skill",
       "向目标 Skill 传递当前已有目标、稿件、事实边界和用户保留项",
+      "封面构图、素材安排和 Lovart 提示词请求路由到 qcs-cover",
       "课程疑似 ASR 错字、过时平台判断或不确定结论不得直接写成规则",
       "输出本轮可直接使用的产物，而不只报告路由名称"
     ],
     "must_not": [
-      "默认串行调用十个 qcs 子 Skill",
+      "默认串行调用全部 qcs 子 Skill",
       "创建第二套选题池、素材包、编导卡、稿件、复盘或专项诊断规则",
       "覆盖原始课程逐字稿或用户确认稿件",
       "把单条表现或课程经验写成已验证平台因果",
+      "把封面设计误当成标题创作、正文分镜或实际出图",
       "复制 DBS、shengcai、review 或 cheat-on-content 已有方法"
     ]
   },
@@ -149,7 +151,7 @@
       "id": "boundary-one-skill-01",
       "type": "boundary",
       "prompt": "帮我看看这条内容现在最影响结果的问题是什么，先只解决一个。",
-      "expected_behavior": ["识别最早阻塞项", "只执行一个主 Skill", "完成前不导航到其余九个子 Skill"]
+      "expected_behavior": ["识别最早阻塞项", "只执行一个主 Skill", "完成前不导航到其他 qcs 子 Skill"]
     },
     {
       "id": "material-retrieval-topic-01",
@@ -178,6 +180,34 @@
       "prompt": "帮这条具体选题从素材库找支持；如果没有相关内容，也继续给出真实判断。",
       "expected_primary_skill": "qcs-topic",
       "expected_behavior": ["无相关命中时如实报告", "继续使用用户已有材料", "不强行关联或编造来源"]
+    },
+    {
+      "id": "route-cover-lovart-01",
+      "type": "routing",
+      "prompt": "标题和正文都已经确认。根据真实人物照和来源截图，给我一套可以直接复制到 Lovart 的视频封面提示词，再给两个单变量测试方案。",
+      "expected_primary_skill": "qcs-cover",
+      "expected_behavior": ["读取确认标题和真实素材", "输出一套主提示词与两套完整单变量方案", "不调用图片生成工具"]
+    },
+    {
+      "id": "near-cover-title-01",
+      "type": "near_neighbor",
+      "prompt": "我还没想好封面标题，先帮我生成三个更有点击理由的小红书标题，不要设计画面。",
+      "expected_primary_skill": "dbs-xhs-title",
+      "expected_behavior": ["不误用 qcs-cover", "只处理标题文字"]
+    },
+    {
+      "id": "near-cover-visual-01",
+      "type": "near_neighbor",
+      "prompt": "封面不用处理，我只想知道正文每一段怎么拍、用什么景别和道具。",
+      "expected_primary_skill": "qcs-visual",
+      "expected_behavior": ["不误用 qcs-cover", "输出视频正文镜头方案"]
+    },
+    {
+      "id": "boundary-cover-one-skill-01",
+      "type": "boundary",
+      "prompt": "这条内容的标题和封面都没想好，先处理当前最早会阻塞下一步的一项。",
+      "expected_primary_skill": "dbs-xhs-title",
+      "expected_behavior": ["先完成标题任务", "不自动串行运行 qcs-cover", "标题确认后再重新判断"]
     }
   ]
 }

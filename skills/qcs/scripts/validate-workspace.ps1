@@ -15,6 +15,7 @@ $skillNames = @(
     "qcs-situation",
     "qcs-story",
     "qcs-visual",
+    "qcs-cover",
     "qcs-conversion"
 )
 
@@ -73,6 +74,16 @@ $sharedReferences = @(
 foreach ($relative in $sharedReferences) {
     if (-not (Test-Path -LiteralPath (Join-Path $skillsRoot $relative))) {
         $errors += "缺少共享参考：skills\$relative"
+    }
+}
+
+$coverReferences = @(
+    "qcs-cover\references\cover-directions.md",
+    "qcs-cover\references\lovart-prompt-schema.md"
+)
+foreach ($relative in $coverReferences) {
+    if (-not (Test-Path -LiteralPath (Join-Path $skillsRoot $relative))) {
+        $errors += "缺少封面参考：skills\$relative"
     }
 }
 

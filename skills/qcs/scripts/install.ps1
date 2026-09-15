@@ -15,6 +15,7 @@ $skillNames = @(
     "qcs-situation",
     "qcs-story",
     "qcs-visual",
+    "qcs-cover",
     "qcs-conversion"
 )
 
@@ -99,4 +100,3 @@ foreach ($link in $missingLinks) {
 }
 
 Write-Output "QCS Skill 套件安装检查完成：总数=$($skillNames.Count)，已存在=$($existingLinks.Count)，新建=$($missingLinks.Count)。"
-

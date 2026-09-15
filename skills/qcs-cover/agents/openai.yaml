@@ -1,0 +1,4 @@
+interface:
+  display_name: "QCS 视频封面"
+  short_description: "为已成立内容生成可直接复制到 Lovart 的可信视频封面提示词"
+  default_prompt: "使用 $qcs-cover，根据这条短视频的确认标题、真实素材和发布平台生成 Lovart 封面提示词及单变量 A/B 方案。"
