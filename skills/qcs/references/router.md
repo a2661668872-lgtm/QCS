@@ -25,10 +25,10 @@
 | 请求信号 | 选择 | 不选择 |
 | --- | --- | --- |
 | “账号该讲什么”“人设/定位”“这条负责拉新还是转化” | `qcs-positioning` | 不直接写稿 |
-| “这个选题值不值得做”“需求够不够具体”“帮我确定这条选题” | `qcs-topic` | 批量生成选题用 `shengcai-topic-generator` |
+| “这个选题值不值得做”“需求够不够具体”“给这条选题找内容对标” | `qcs-topic` | 批量生成选题用 `shengcai-topic-generator` |
 | “资料太多怎么组织”“先讲什么”“列大纲” | `qcs-outline` | 已有完整稿的衔接检查不用它 |
 | “观众为什么继续看/信任/行动”“漏斗哪里断了” | `qcs-viewer-path` | 不代替逐段结构重排 |
-| “整篇开头、正文、结尾怎么安排”“设计钩子和骨架” | `qcs-structure` | 只改已有开头用 `dbs-hook` |
+| “拆这条爆款视频怎么讲”“整篇开头、正文、结尾怎么安排”“设计钩子和骨架” | `qcs-structure` | 只改已有开头用 `dbs-hook` |
 | “太复杂”“改成人话”“术语/重复太多” | `qcs-language` | 只查 AI 味用 `dbs-ai-check` |
 | “太抽象”“加场景”“让人有代入感” | `qcs-situation` | 没有真实事实时不编场景 |
 | “把真实经历讲成故事”“过程没张力” | `qcs-story` | 只有观点无真实过程时先补材料或做情境 |
@@ -39,6 +39,7 @@
 ### 近邻判断
 
 - `qcs-topic` 判断一条选题；`shengcai-topic-generator` 批量产出并写选题池。
+- `qcs-topic` 为当前选题挑内容结构对标；`qcs-structure` 拆已选对标的段落功能并决定如何迁移；`dbs-benchmark` 仍用于寻找商业或账号对标。
 - `qcs-outline` 组织写稿前材料；`shengcai-content-writer` 负责素材包、访谈、初稿和定稿。
 - `qcs-structure` 设计整条作品的信息推进；`dbs-hook` 只处理已有开头；`dbs-script-flow` 只诊断已有逐字稿的衔接和划走点。
 - `qcs-language` 改善用户可理解性；`dbs-ai-check` 识别机械、套话和 AI 痕迹。
@@ -52,7 +53,7 @@
 | --- | --- |
 | 批量生成或增量补充选题池 | `shengcai-topic-generator` |
 | 素材包、访谈、完整初稿或最终发布稿 | `shengcai-content-writer` |
-| 找值得模仿的对标 | `dbs-benchmark` |
+| 找商业或账号对标 | `dbs-benchmark` |
 | 选题已定，检查内容是否讲清楚、有用 | `dbs-content` |
 | 只诊断或修改开头 | `dbs-hook` |
 | 检查逐字稿衔接、密度、口播流畅度和划走点 | `dbs-script-flow` |
