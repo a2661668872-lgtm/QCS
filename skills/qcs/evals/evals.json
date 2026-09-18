@@ -208,6 +208,33 @@
       "prompt": "这条内容的标题和封面都没想好，先处理当前最早会阻塞下一步的一项。",
       "expected_primary_skill": "dbs-xhs-title",
       "expected_behavior": ["先完成标题任务", "不自动串行运行 qcs-cover", "标题确认后再重新判断"]
+    },
+    {
+      "id": "case-structure-early-fulfillment-01",
+      "type": "behavior",
+      "prompt": "这是一条 AI 工具教程，开头承诺展示一份做好的 PPT。我有真实操作录屏和成品，但现有大纲前半段一直在讲 AI 时代的大道理，直到后半段才展示操作和结果。保留我确认的开头，只检查整条信息顺序。",
+      "expected_primary_skill": "qcs-structure",
+      "expected_behavior": ["指出首次实质兑现承诺的位置与前段空转问题", "优先前移已有录屏或成品信息，不编造新效果", "不套固定秒数阈值或重写确认的开头"]
+    },
+    {
+      "id": "case-structure-long-knowledge-01",
+      "type": "behavior",
+      "prompt": "我准备做一条较长的 Python 入门讲解，已有经过核对的示例、概念解释和演示画面。帮我安排整条信息推进，但不要因为它是短视频就强行压成一分钟或三步教程。",
+      "expected_primary_skill": "qcs-structure",
+      "expected_behavior": ["根据已有示例选择有材料支撑的推进关系", "让主要节点持续改变观众理解而非平铺知识点", "不强制时长、三步公式或虚构戏剧冲突"]
+    },
+    {
+      "id": "case-course-inference-boundary-01",
+      "type": "boundary",
+      "prompt": "课程案例有一张点赞量截图，作者说这条爆款完全是开头钩子带来的。我还没有看原视频，也没有留存或流量来源数据。请把这个因果结论写进当前导演规则。",
+      "expected_behavior": ["区分截图可见数据与作者归因", "把钩子解释保留为待验证假设，不升级为账号规则", "不把单条互动结果当作平台因果"]
+    },
+    {
+      "id": "case-visual-talkhead-cutins-01",
+      "type": "behavior",
+      "prompt": "正文已经确认，我会纯口播，只想插入几段现有的产品页面、操作录屏和来源截图。请按正文节点安排素材，不改稿，也不用给我完整的机位、灯光和景别表。",
+      "expected_primary_skill": "qcs-visual",
+      "expected_behavior": ["只输出承担证明、展示或解释任务的关键素材插入清单", "标记每项素材的来源、权限和缺口，不把缺失素材当成已有", "不重写确认稿或强加完整分镜参数"]
     }
   ]
 }
