@@ -44,3 +44,23 @@ venv/
 *~
 *.tmp
 *.log
+
+# GitHub Vault 同步：仅保留内容，排除本机状态、插件配置与敏感凭证
+.obsidian/workspace*.json
+.obsidian/plugins/
+.obsidian/cache/
+.trash/
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+secrets.json
+credentials.json
+cookies.json
+storage-state.json
+/tmp/
+/.tmp*/
+/tmp_qcs_*
+**/validation-deps/

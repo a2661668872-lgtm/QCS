@@ -1,0 +1,215 @@
+{
+  "sources": [
+    {
+      "file": "methods/qcs-positioning/method.md",
+      "source": "skills/qcs-positioning/SKILL.md",
+      "source_sha256": "3f36331ba19980ba9f0c8e5625ba8ba62f31476a6466a49052ebf538d88b419a"
+    },
+    {
+      "file": "methods/qcs-topic/method.md",
+      "source": "skills/qcs-topic/SKILL.md",
+      "source_sha256": "2b178ac7f2fbb384119a384541388d86291d02d8468c558c899d00091550c368"
+    },
+    {
+      "file": "methods/qcs-outline/method.md",
+      "source": "skills/qcs-outline/SKILL.md",
+      "source_sha256": "4e877e7f68f5bba50ba7b9a2f87d135f498a07f68d451a3537f90dbe3bb03b36"
+    },
+    {
+      "file": "methods/qcs-viewer-path/method.md",
+      "source": "skills/qcs-viewer-path/SKILL.md",
+      "source_sha256": "c4595bbd269b7aec32189637467f3938430e4b07a081ab505aa00d961f5383c2"
+    },
+    {
+      "file": "methods/qcs-structure/method.md",
+      "source": "skills/qcs-structure/SKILL.md",
+      "source_sha256": "0c67ce3e9cb2395d8754e0bf5a8e1e8492fc0b6bf938c0ffee29815a18342a7f"
+    },
+    {
+      "file": "methods/qcs-language/method.md",
+      "source": "skills/qcs-language/SKILL.md",
+      "source_sha256": "5ea2f23c0bee3438a9f95dba74e740b194d7541e47d85952baab5318faf9541b"
+    },
+    {
+      "file": "methods/qcs-situation/method.md",
+      "source": "skills/qcs-situation/SKILL.md",
+      "source_sha256": "00c6bb1b6f600f21484a01c2f4b64ca28b1a19f58c92055f973ee1e656e98b45"
+    },
+    {
+      "file": "methods/qcs-story/method.md",
+      "source": "skills/qcs-story/SKILL.md",
+      "source_sha256": "7a7593ab019dd9564aa2744e7c5ffccc71eb99c03d2cea3e91ffad334bf97832"
+    },
+    {
+      "file": "methods/qcs-visual/method.md",
+      "source": "skills/qcs-visual/SKILL.md",
+      "source_sha256": "4ee52ea439b33c732876a885d1f36209a09d8c407427527092e466cd0a01b065"
+    },
+    {
+      "file": "methods/qcs-cover/method.md",
+      "source": "skills/qcs-cover/SKILL.md",
+      "source_sha256": "fc745a93eabbdeda732753d4587d77be9a636e6e5bc4ff62ec370fe610327e54"
+    },
+    {
+      "file": "methods/qcs-cover/references/cover-directions.md",
+      "source": "skills/qcs-cover/references/cover-directions.md",
+      "source_sha256": "fffa07bfa24d96abeb3f965b9472cc5729ec63cb0f0dd36a71537a29c11342a0"
+    },
+    {
+      "file": "methods/qcs-cover/references/lovart-prompt-schema.md",
+      "source": "skills/qcs-cover/references/lovart-prompt-schema.md",
+      "source_sha256": "213cb478a21b84bfc97ac02be1a6a271edbd950492bdae953f357735da54f870"
+    },
+    {
+      "file": "methods/qcs-conversion/method.md",
+      "source": "skills/qcs-conversion/SKILL.md",
+      "source_sha256": "6d2aefdc03c0c47f3fa75ad419bd3e93e3b655180133b52229065d394ab871d9"
+    },
+    {
+      "file": "methods/shengcai-content-writer/method.md",
+      "source": "skills/shengcai-content-writer/SKILL.md",
+      "source_sha256": "2d706a50840f83c48cadbfeec7f5dc010e45b5ea881915f6587cf982cc196136"
+    },
+    {
+      "file": "methods/shengcai-content-writer/references/output-contract.md",
+      "source": "skills/shengcai-content-writer/references/output-contract.md",
+      "source_sha256": "0030452afd89d6961267e6706290ed6f0b2e28043dd5946f7d870db140329b57"
+    },
+    {
+      "file": "methods/shengcai-topic-generator/method.md",
+      "source": "skills/shengcai-topic-generator/SKILL.md",
+      "source_sha256": "5c3560950e26480ef5a2cae58efb677d3e64de826c7d5a96b4c9484462b88626"
+    },
+    {
+      "file": "methods/shengcai-topic-generator/references/output-contract.md",
+      "source": "skills/shengcai-topic-generator/references/output-contract.md",
+      "source_sha256": "3d93de27375dc43d5af16ff7ec2998e8e3ba9e369ebd567ff4469570db4e5ae2"
+    },
+    {
+      "file": "methods/review/method.md",
+      "source": "skills/review/SKILL.md",
+      "source_sha256": "b1594089088d6152c37f26f21823f41a24454e7aca701a287e65527968349e45"
+    },
+    {
+      "file": "methods/dbs-benchmark/method.md",
+      "source": "external-skills/dbs-benchmark/SKILL.md",
+      "source_sha256": "dbae586b3e98b7745638d208130b4604b855213accbaf9d7eacabe12f4fce225"
+    },
+    {
+      "file": "methods/dbs-content/method.md",
+      "source": "external-skills/dbs-content/SKILL.md",
+      "source_sha256": "a621ebe4b6fb5a56d5b054f8ef677339c3c9f7f4dad83cc4bbdfd13535f969b0"
+    },
+    {
+      "file": "methods/dbs-hook/method.md",
+      "source": "external-skills/dbs-hook/SKILL.md",
+      "source_sha256": "a7f9cf1ffe9f218d8fd91f7f2ed767fcd7294c9dbaadfbfce490e65d48329816"
+    },
+    {
+      "file": "methods/dbs-script-flow/method.md",
+      "source": "external-skills/dbs-script-flow/SKILL.md",
+      "source_sha256": "c0f0ac0cf78158519a9b7dc2ace8e4085e042f122e39a484da6533ea0f4e5c1e"
+    },
+    {
+      "file": "methods/dbs-resonate/method.md",
+      "source": "external-skills/dbs-resonate/SKILL.md",
+      "source_sha256": "1ad88f527d6571754515ea4853b0628cacf513b4c822f3c13a05b12edc3b3020"
+    },
+    {
+      "file": "methods/dbs-ai-check/method.md",
+      "source": "external-skills/dbs-ai-check/SKILL.md",
+      "source_sha256": "15515598528b6d98ae489cf8add3a9f797a76aafa81994f92ce6e1ff6f7f0b8b"
+    },
+    {
+      "file": "methods/dbs-xhs-title/method.md",
+      "source": "external-skills/dbs-xhs-title/SKILL.md",
+      "source_sha256": "23fe0120c6ba53afcf6b927c4025ecc78704f2e18c758b74f78526fef8abcee8"
+    },
+    {
+      "file": "methods/dbs-content-risk-check/method.md",
+      "source": "external-skills/dbs-content-risk-check/SKILL.md",
+      "source_sha256": "7f4d1562715bfdb3588de0f8a50c6ed4dc6be4323514fa64b40d2f7d5929f5ea"
+    },
+    {
+      "file": "methods/qcs/references/course-map.md",
+      "source": "skills/qcs/references/course-map.md",
+      "source_sha256": "b46fc738bfa18aa85b3f4c5fdcf847eb9848d8b1198aafd0f394f36e9a407876"
+    },
+    {
+      "file": "methods/qcs/references/course-methods.md",
+      "source": "skills/qcs/references/course-methods.md",
+      "source_sha256": "e10e69f680397a6785f59d59120057bc15676eef95aa1b66c69d184c92e57a0a"
+    },
+    {
+      "file": "methods/qcs/references/dbs-routing.md",
+      "source": "skills/qcs/references/dbs-routing.md",
+      "source_sha256": "1f81ffe85426cc3c3829e9b538a9fa6eef26aab741cd4d6473a39241035efcc8"
+    },
+    {
+      "file": "methods/qcs/references/director-card-schema.md",
+      "source": "skills/qcs/references/director-card-schema.md",
+      "source_sha256": "601b0b6347712c6700e3c7a61442ab6704ec2ebd7e872d0bca71714381a829ed"
+    },
+    {
+      "file": "methods/qcs/references/metrics-and-diagnosis.md",
+      "source": "skills/qcs/references/metrics-and-diagnosis.md",
+      "source_sha256": "9841a367c22cb6fb18163f4e5220350874e8ad2fd76d2639d59b8df71cf98bac"
+    },
+    {
+      "file": "methods/qcs/references/router.md",
+      "source": "skills/qcs/references/router.md",
+      "source_sha256": "9c0143da55836571e0a64e3cba9061c742b3e59457e409f0f5c000a4a830fb68"
+    },
+    {
+      "file": "methods/qcs/references/shared-contract.md",
+      "source": "skills/qcs/references/shared-contract.md",
+      "source_sha256": "9a174e2a965e69e51ffcd77699308060066232d7062e2a8a03b4d7194c6b5ed6"
+    },
+    {
+      "file": "methods/qcs/references/upgrade-protocol.md",
+      "source": "skills/qcs/references/upgrade-protocol.md",
+      "source_sha256": "350f2b8d8d4945d9648b350395f6df85ad5dace58831e5d86731cd3bda35196f"
+    },
+    {
+      "file": "references/course/01-定位和策划思维.md",
+      "source": "01_学习对象/安先生/01-定位和策划思维.md",
+      "source_sha256": "f8e3e560593235f4e58e67456cb06ae3d34c2228509f8115c70f49270700957a"
+    },
+    {
+      "file": "references/course/02-短视频的流量结构.md",
+      "source": "01_学习对象/安先生/02-短视频的流量结构.md",
+      "source_sha256": "c8539a05cf897da09618164a64b9949ca2a1198dea3e0c9ec9b833710cdeb0bb"
+    },
+    {
+      "file": "references/course/03-选题流程和内容思维.md",
+      "source": "01_学习对象/安先生/03-选题流程和内容思维.md",
+      "source_sha256": "2e46d00018cefcc1a8b422597417092edc1a1edcb29f39da1c9d3fd0517cc5a3"
+    },
+    {
+      "file": "references/course/04-结构的精细化处理.md",
+      "source": "01_学习对象/安先生/04-结构的精细化处理.md",
+      "source_sha256": "316fb13dd1714221619226bff7f312f60fc6be6ec1e61808ed956d1e98595d9d"
+    },
+    {
+      "file": "references/course/05-情境化思维.md",
+      "source": "01_学习对象/安先生/05-情境化思维.md",
+      "source_sha256": "f30d1aef8f7c845a727cc8a6b46d205416c581cf4304938534db7936eaaa476e"
+    },
+    {
+      "file": "references/course/06-故事性思维.md",
+      "source": "01_学习对象/安先生/06-故事性思维.md",
+      "source_sha256": "25aaa00c94fbb958b6dd8623b733e5e1c0f1ba3a4ca13a70ece09e7c91cbeba3"
+    },
+    {
+      "file": "references/course/07-用画面讲故事.md",
+      "source": "01_学习对象/安先生/07-用画面讲故事.md",
+      "source_sha256": "0fdfd5acf45709bdbb0b2f00a630672f258261d9d2413e7acf8db3326167e3ff"
+    },
+    {
+      "file": "references/course/core-methods.md",
+      "source": "01_学习对象/安先生/5.0课程逐字稿校订/核心方法校订_v0.1.md",
+      "source_sha256": "169651d677eeb7a15e0faedccf7c42dab8bdb38fe6115bbdf8f936970e6e4d32"
+    }
+  ],
+  "unbundled_references": []
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "files": 44,
+  "relative_links_checked": 74,
+  "zip_bytes": 138167,
+  "expanded_bytes": 276630,
+  "source_files_unchanged": true,
+  "gemini_install_test": "not performed",
+  "errors": []
+}
